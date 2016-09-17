@@ -1,16 +1,8 @@
 <script src = "js/jquery-3.1.0.min.js" type = "text/javascript"></script>
 
 <div>this is some text</div>
+<div class="">
+  this is also some text
+</div>
 
-<script>
-
-  function get(name){
-    if(name=(new RegExp('[?&]'+encodeURIComponent(name)+'=([^&]*)')).exec(location.search))
-      return decodeURIComponent(name[1]);
-  }
-
-  var url = get('url');
-
-  alert("url: " + url);
-  
-</script>
+<script type="text/javascript" src="js/parse.js"></script>
