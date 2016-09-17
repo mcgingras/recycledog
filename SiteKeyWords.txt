@@ -1,4 +1,13 @@
 1) JCrew
+
+	Individual Item:
+	- jcrew
+	- mens_category/shirts/BrushedTwillShirts/PRDOVR~F4171/F4171
+
+	Category:
+	- jcrew
+	- mens_category/shirts
+
 	- jcrew
 	- mens/womens/boys/girls category
 	- article of clothing (i.e. shirts)
@@ -6,6 +15,16 @@
 	- product number (add "item ...")
 
 2) NorthFace
+
+	Individual Item:
+	- the north face
+	- mens-jackets-vests-insulated/mens-nuptse-jacket-...?...
+
+	Category:
+	- the north face
+	- mens-jackets-vests
+	- www.thenorthface.com/shop/mens-jackets-vests
+
 	- thenorthface (add in %20)
 	- parse out /shop/
 	- mens/womens/kids/shoes/equipment
@@ -17,6 +36,15 @@
 
 3) Patagonia
 
+	Individual Item:
+	- patagonia
+	- mens-nano-air-hoody
+	- 84260
+
+	Category:
+	- patagonia
+	- mens-jackets-vests
+	
 
 4) Adidas
 
