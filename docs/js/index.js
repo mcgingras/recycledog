@@ -1,7 +1,7 @@
 $(document).ready(function() {
     var pre_pop = true;
     var header_init_pos = true;
-    if (pre_pop) { $(".popover-wrapper").addClass("show"); pre_pop = false; }
+    if (pre_pop) { $(".popover-wrapper.suggest").addClass("show"); pre_pop = false; }
 
 
     /*--------------------Rotating_Tag--------------------*/
