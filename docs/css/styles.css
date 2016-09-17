@@ -177,6 +177,28 @@ body{
         width: 100%;
         height: 470px;
     }
+
+    .popover-header {
+        width: 100%;
+    }
+
+    .popover-header img {
+        display: inline-block;
+        width: 10%;
+        margin-top: 5px;
+    }
+
+    .popover-header hr {
+        display: inline-block;
+        width: 39%;
+        margin-top: 30px;
+        border-left: 0px;
+        border-right: 0px;
+        vertical-align: top;
+        margin-left: 3%;
+        margin-right: 3%;
+        border-top: solid 1px #c9c9c9;
+    }
     .popover-bottom {
         width: 100%;
         text-align: center;
