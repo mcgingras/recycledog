@@ -3,21 +3,43 @@
 
 
 <header class ="header">
-    <img src="assets/recycledog_square.png" alt="" />
+    <img src="assets/recycledog.png" alt="" />
 </header>
 
-<div class="body">
 
-  <h3 class="phrase">Yo, Recycle Dog.</h3>
+  <div class ="main">
 
-  <div>ebay Results</div>
-  <div id="js-url">
+    <h3 class="phrase">Yo, Recycle Dog.</h3>
+
+    <div class="body clearfix">
+
+      <div class="body--title">
+      TOP DOGS
+        <svg height="4" width="850">
+        <line x1="0" y1="0" x2="850" y2="0" style="stroke:rgb(151,151,151);stroke-width:1.5" />
+        </svg>
+      </div>
+
+        <div class="body--grid">
+          <div class="grid--row">
+            <div class="grid"></div>
+            <div class="grid"></div>
+            <div class="grid"></div>
+          </div>
+          <div class="grid--row">
+            <div class="grid"></div>
+            <div class="grid"></div>
+            <div class="grid"></div>
+          </div>
+        </div>
+
+      <div id="js-url"></div>
+      <!-- <div id="results"></div> -->
+
+    </div>
 
   </div>
-  <!-- <div id="results"></div> -->
 
-
-</div>
 
 <script type="text/javascript" src="js/yql_query.js"></script>
 <script type="text/javascript" src="js/ebay.js"></script>
