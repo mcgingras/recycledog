@@ -39,16 +39,22 @@ console.log('query_str_lst: ' + query_str_lst);
 // QUERY Yahoo Query Language to get website data
 var yql_query = 'SELECT * FROM html WHERE url="'+url+'"';
 
-// Define your callback:
-var callback = function(data) {
-    var post = data.query.results.item;
-    console.log("post: " + post);
-    console.log("data.query.results: " + data.query.results.item);
-    alert(post.title);
-};
+var query_url = "http://query.yahooapis.com/v1/public/yql?q=select%20title%20from%20html%20where%20url%3D%22http%3A%2F%2Fstackoverflow.com%22%20and%0A%20%20%20%20%20%20xpath%3D'%2F%2Fdiv%2Fh3%2Fa'%0A%20%20%20%20&format=json&callback=cbfunc"
+
+var titleList = $.getJSON(theAboveUrl);
+
+console.log('titleList: ' + titleList);
+
+// // Define your callback:
+// var callback = function(data) {
+//     var post = data.query.results.item;
+//     console.log("post: " + post);
+//     console.log("data.query.results: " + data.query.results.item);
+//     alert(post.title);
+// };
 
 // Instantiate with the query:
-var firstFeedItem = new YQLQuery(yql_query, callback);
+// var firstFeedItem = new YQLQuery(yql_query, callback);
 
 // If you're ready then go:
-firstFeedItem.fetch(); // Go!!
+// firstFeedItem.fetch(); // Go!!
