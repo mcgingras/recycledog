@@ -6,7 +6,7 @@
 <script src="bower_components/Morphext/dist/morphext.min.js"></script>
 
 <header class ="header">
-    <a class="scroll-back" href=""><img src="assets/recycledog.png" alt="" /></a><a class="scroll-back" href=""><span id="tag">RECYLCE DOG</span></a>
+    <a id = "logo" class="scroll-back" href="#logo"><img src="assets/recycledog.png" alt="" /></a><a class="scroll-back" href="#logo"><span id="tag">RECYLCE DOG</span></a>
 </header>
 
 
@@ -57,6 +57,9 @@
   <div class="popover-wrapper">
       <div class="popover-content">
           <div class="popover-top">
+              <div class="popover-header">
+                  <hr><img src="assets/recycledog.png" /><hr>
+              </div>
           </div>
           <div class="popover-bottom">
               <span id="close-wrap">NOT WHAT YOU'RE LOOKING FOR? - <button id="close">SEE OTHER</button></span>
@@ -76,6 +79,12 @@ $("#js-rotating").Morphext({
     complete: function () {
         // Called after the entrance animation is executed.
     }
+});
+
+
+$("a[href='#logo']").click(function() {
+  $("html, body").animate({ scrollTop: 0 }, "ease-in");
+  return false;
 });
 
 </script>
