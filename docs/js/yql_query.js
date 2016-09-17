@@ -18,7 +18,7 @@ function YQLQuery(query, callback) {
             document.body.removeChild(scriptEl);
         };
 
-        scriptEl.src = 'http://query.yahooapis.com/v1/public/yql?q='
+        scriptEl.src = 'https://query.yahooapis.com/v1/public/yql?q='
                      + encodedQuery + '&format=json&callback=YQLQuery.' + uid;
         document.body.appendChild(scriptEl);
 
