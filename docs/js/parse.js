@@ -25,10 +25,10 @@ for (var i = 0; i < str_array.length; i++) {
     str = store_name
   }
 
-  // remove empty elements
-  if (str != "") {
+  // remove empty elements and 'https'
+  if (str != "" && str != 'https:') {
     query_str_lst.push(str);
   }
 }
 
-console.log('query_str_lst' + query_str_lst);
+console.log('query_str_lst: ' + query_str_lst);
