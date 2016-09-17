@@ -111,7 +111,7 @@ function run_ebay_query(query_str_lst) {
       url += "&callback=_cb_findItemsByKeywords";
       url += "&REST-PAYLOAD";
       url += keywords;
-      url += "&paginationInput.entriesPerPage=5";
+      url += "&paginationInput.entriesPerPage=6";
 
   // Submit the request
   s=document.createElement('script'); // create script element
