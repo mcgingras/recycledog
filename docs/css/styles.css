@@ -1,0 +1,22 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  background-color: #F7F7F7;
+}
+
+.header{
+  height: 60px;
+  background-color: #FFFFFF;
+  border-bottom: 2px solid #c9c9c9;
+  display: flex;
+  justify-content: center;
+  box-shadow: 0px 4px 6px 0px rgba(0,0,0,0.19);
+}
+
+.header img{
+  max-height: 60px;
+  max-width: 60px;
+}
