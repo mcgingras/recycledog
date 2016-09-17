@@ -28,6 +28,10 @@ for (var i = 0; i < str_array.length; i++) {
     str = store_name;
   }
 
+  if(str.includes(".")) {
+    str = str.split(".")[0];
+  }
+
   // remove empty elements and 'https'
   if (str != "" && str != 'https:') {
     query_str_lst.push(str);
