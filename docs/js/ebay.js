@@ -4,13 +4,14 @@ function _cb_findItemsByKeywords(root) {
   var html = [];
 
   console.log('root: ' + root);
+  console.log('root.findItemsByKeywordsResponse[1]: ' + root.findItemsByKeywordsResponse[1]);
   console.log('items: ' + items);
 
   html.push('<table width="100%" border="0" cellspacing="0" cellpadding="3"><tbody>');
   for (var i = 0; i < items.length; ++i) {
     var item     = items[i];
     var title    = item.title;
-    var pic      = item.galleryURL;
+    var pic      = item.galleryURL.toString().replace('http:','https:');
     var viewitem = item.viewItemURL;
     if (null != title && null != viewitem) {
       html.push('<tr><td>' + '<img src="' + pic + '" border="0">' + '</td>' +
@@ -18,6 +19,9 @@ function _cb_findItemsByKeywords(root) {
     }
   }
   html.push('</tbody></table>');
+  if (items.length = 0) {
+    html.push('<p>Sorry, we couldn\'t find anything.</p>');
+  }
   document.getElementById("results").innerHTML = html.join("");
 }  // End _cb_findItemsByKeywords() function
 
@@ -73,7 +77,7 @@ function run_ebay_query(query_str_lst) {
   // Construct query keywords
   var keywords = '&keywords=' + query_str_lst.join('%20').replace(/ /g,'%20');
   console.log('all keywords: ' + keywords)
-  keywords = '&keywords=' + query_str_lst[1].replace(/ /g,'%20');    // CHANGE LATER***************
+  keywords = '&keywords=' + query_str_lst[0].replace(/ /g,'%20');    // CHANGE LATER***************
   keywords = '&keywords=' + query_str_lst.slice(0,2).join('%20').replace(/ /g,'%20');    // CHANGE LATER***************
   console.log('keywords: ' + keywords);
 
@@ -88,7 +92,6 @@ function run_ebay_query(query_str_lst) {
       url += "&REST-PAYLOAD";
       url += keywords;
       url += "&paginationInput.entriesPerPage=5";
-
 
   // Submit the request
   s=document.createElement('script'); // create script element
