@@ -4,7 +4,7 @@ function _cb_findItemsByKeywords(root) {
   var html = [];
 
   console.log('root: ' + root);
-  console.log('root.findItemsByKeywordsResponse[0]: ' + root.findItemsByKeywordsResponse[0]);
+  console.log('root.findItemsByKeywordsResponse[1]: ' + root.findItemsByKeywordsResponse[1]);
   console.log('items: ' + items);
 
   html.push('<table width="100%" border="0" cellspacing="0" cellpadding="3"><tbody>');
@@ -87,7 +87,7 @@ function run_ebay_query(query_str_lst) {
       url += "&RESPONSE-DATA-FORMAT=JSON";
       url += "&callback=_cb_findItemsByKeywords";
       url += "&REST-PAYLOAD";
-      url += "&keywords=polo%20tshirt";
+      url += "&keywords=polo%20tshirt%20f3994";
       url += "&paginationInput.entriesPerPage=5";
 
   // Submit the request
