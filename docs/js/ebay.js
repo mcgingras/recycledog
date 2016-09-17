@@ -3,9 +3,7 @@ function _cb_findItemsByKeywords(root) {
   var items = root.findItemsByKeywordsResponse[0].searchResult[0].item || [];
   var html = [];
 
-  console.log('root: ' + root);
-  console.log('root.findItemsByKeywordsResponse[1]: ' + root.findItemsByKeywordsResponse[1]);
-  console.log('items: ' + items);
+  console.log('items length: ' + items.length);
 
   html.push('<table width="100%" border="0" cellspacing="0" cellpadding="3"><tbody>');
   for (var i = 0; i < items.length; ++i) {
@@ -77,10 +75,7 @@ function run_ebay_query(query_str_lst) {
   console.log('run ebay query');
   // Construct query keywords
   var keywords = '&keywords=' + query_str_lst.join('%20').replace(/ /g,'%20');
-  console.log('all keywords: ' + keywords)
-  keywords = '&keywords=' + query_str_lst[0].replace(/ /g,'%20');    // CHANGE LATER***************
-  keywords = '&keywords=' + query_str_lst.slice(0,2).join('%20').replace(/ /g,'%20');    // CHANGE LATER***************
-  console.log('keywords: ' + keywords);
+  console.log('SEARCH: ' + keywords);
 
   // Construct the request
   var url = "https://svcs.ebay.com/services/search/FindingService/v1";

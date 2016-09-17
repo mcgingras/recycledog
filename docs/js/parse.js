@@ -44,7 +44,7 @@ for (var i = 0; i < str_array.length; i++) {
 
 document.getElementById('js-url').innerHTML = query_str_lst;
 
-console.log('query_str_lst: ' + query_str_lst);
+// console.log('query_str_lst: ' + query_str_lst);
 
 // Run eBay query
 run_ebay_query(query_str_lst);
