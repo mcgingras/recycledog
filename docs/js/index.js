@@ -24,9 +24,9 @@ $(document).ready(function() {
         $(".popover-wrapper").removeClass("show");
     });
 
-    $(".scroll-back").on("click", function() {
-        document.body.scrollTop = 0;
-        return false;
+    $(".scroll-back").click(function() {
+      $("html, body").animate({ scrollTop: 0 }, "ease-in");
+      return false;
     });
 
     $(window).on("scroll", function() {
@@ -36,7 +36,7 @@ $(document).ready(function() {
             $(".header").addClass("min");
             header_init_pos = false;
         }
-        else if (!header_init_pos && scroll_pos <= scroll_target && scroll_pos != 0) {
+        else if (!header_init_pos && scroll_pos <= scroll_target) {
             $(".header").removeClass("min");
             header_init_pos = true;
         }
