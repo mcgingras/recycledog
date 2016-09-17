@@ -33,7 +33,7 @@ for (var i = 0; i < str_array.length; i++) {
   }
 
   // remove empty elements and 'https'
-  if (str != '' || str != 'https:') {
+  if (str != "" && str != 'https:') {
     query_str_lst.push(str);
   }
 }
