@@ -67,7 +67,7 @@ function _cb_findItemsByKeywords(root) {
 function run_ebay_query(query_str_lst) {
   console.log('run ebay query');
   // Construct query keywords
-  var keywords = '&keywords=' + query_str_lst.join('$20');
+  var keywords = '&keywords=' + query_str_lst.join('%20');
   console.log('keywords: ' + keywords);
 
   // Construct the request
