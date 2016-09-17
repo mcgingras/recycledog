@@ -3,10 +3,13 @@ function get(name) {
     return decodeURIComponent(name[1]);
 }
 
-// List of stores [urlname,actual name] (name we want in qury is on the right)
+// List of stores [urlname,actual name] (name we want in query is on the right)
 var store_names_lst = [
   ["thenorthface","north face"],
-  ["bananarepublic","banana republic"]
+  ["bananarepublic","banana republic"],
+  ["ae","american eagle"],
+  ["anntaylor","ann taylor"],
+  ["frenchconnection","french connection"]
 ];
 
 
@@ -18,7 +21,7 @@ var str_array = url.split("/");
 
 // Get store name from website name
 var exp = url.split(".");
-var store_name = exp[1];
+var store_name = exp[exp.length-2];
 
 
 for (var i = 0; i < str_array.length; i++) {
