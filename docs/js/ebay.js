@@ -20,7 +20,7 @@ function _cb_findItemsByKeywords(root) {
     console.log("pic value is" +pic +"and has type"+typeof(pic));
     var viewitem = item.viewItemURL;
     if (null != title && null != viewitem) {
-      html.push('<div class="grid"><div class="grid--img" style="background-image: url("'+pic+'")"></div><div class="grid--info"><h4>'+title+'</h4></div></div>');
+      html.push('<div class="grid"><div class="grid--img" style="background-image: url(\''+pic+'\')"></div><div class="grid--info"><h4>'+title+'</h4></div></div>');
     }
 
     if (i%3 == 2){
