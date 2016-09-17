@@ -14,7 +14,7 @@ $(document).ready(function() {
     });
 
     $(window).on("scroll", function() {
-        var scroll_target = 180;
+        var scroll_target = 160;
         var scroll_pos = document.body.scrollTop;
         if (header_init_pos && scroll_pos > scroll_target) {
             $(".header").addClass("min");
