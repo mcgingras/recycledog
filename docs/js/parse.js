@@ -22,6 +22,11 @@ for (var i = 0; i < str_array.length; i++) {
   // replace www.company_name.com with just company_name
   if (str.includes('www.'+store_name)) {
     str = store_name;
+
+    // North Face - insert spaces for thenorthface
+    if (str = "thenorthface") {
+      str = "the north face";
+    }
   }
 
   // remove .com at end
@@ -29,10 +34,8 @@ for (var i = 0; i < str_array.length; i++) {
     str = str.split(".")[0];
   }
 
-console.log('store_name: ' + store_name);
   // NORTH FACE remove -text?stuff
   if (store_name == 'thenorthface') {
-    console.log('parse northface');
     if (str.includes('?')) {
       last_index = str.lastIndexOf('-');
       str = str.substring(0,last_index);
@@ -43,7 +46,7 @@ console.log('store_name: ' + store_name);
   str = str.replace(/_/g,' ');
 
   // replace dash (-) with space
-  str = str.replace(/-/g,' ');
+  str = str.replace(/-/g,' ')
 
   // remove empty elements and 'https'
   if (str != "" && !str.includes('http')) {
