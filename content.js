@@ -5,7 +5,7 @@ chrome.browserAction.onClicked.addListener(function(tab) {
   }, function(tabs) {
     var tab = tabs[0];
     var url = tab.url;
-    var new_url = 'https://mcgingras.github.io/bigredhacks/' + '?url=' + url
+    var new_url = 'https://mcgingras.github.io/bigredhacks/' + '?url=' + encodeURIComponent(url);
     chrome.tabs.create({'url': new_url, 'selected': true});
   });
 });
