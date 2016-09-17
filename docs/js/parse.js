@@ -3,6 +3,11 @@ function get(name) {
     return decodeURIComponent(name[1]);
 }
 
+// List of stores [urlname,actual name] (name we want in qury is on the right)
+var store_names_lst = [
+  ["thenorthface","north face"]
+];
+
 
 
 var yql_results = "";
@@ -23,8 +28,11 @@ for (var i = 0; i < str_array.length; i++) {
     str = store_name;
 
     // North Face - insert spaces for thenorthface
-    if (str == "thenorthface") {
-      str = "the north face";
+    for (var j = 0; j < store_names_lst.length; j++) {
+      var store_j = store_names_lst[j];
+      if (str == store_j[0]) {
+        str = store_j[1];
+      }
     }
   }
 
