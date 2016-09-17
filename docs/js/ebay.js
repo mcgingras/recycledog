@@ -9,12 +9,13 @@ function _cb_findItemsByKeywords(root) {
   for (var i = 0; i < items.length; ++i) {
     if (i%3 == 0) {
       html.push('<div class="grid--row">');
-      console.log(html);
       dirty = true;
     }
 
+    console.log(item.galleryURL);
     var item     = items[i];
     var title    = item.title;
+    var price    = item.currentPrice;
     var pic      = item.galleryURL.toString().replace('http:','https:');
     var viewitem = item.viewItemURL;
     if (null != title && null != viewitem) {
