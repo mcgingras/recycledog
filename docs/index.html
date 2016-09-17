@@ -3,14 +3,12 @@
 <div>this is some text</div>
 
 <script>
-  alert("hello");
-
   function get(name){
     if(name=(new RegExp('[?&]'+encodeURIComponent(name)+'=([^&]*)')).exec(location.search))
       return decodeURIComponent(name[1]);
   }
 
-  var url = get('foo');
+  var url = get('url');
 
   alert("url: " + url);
 </script>
