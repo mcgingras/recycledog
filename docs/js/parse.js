@@ -3,6 +3,7 @@ function get(name) {
     return decodeURIComponent(name[1]);
 }
 
+var query_str_lst = [];
 var url = get('url');
 var exp = url.split('.');
 var str_array = url.split('/');
@@ -14,6 +15,13 @@ console.log('store is ' + store);
 console.log('str_array: ' + str_array);
 
 for (var i = 0; i < str_array.length; i++) {
+  // trim website name to (hopefully) company name
   var str = str_array[i];
   console.log('element: ' + str);
+
+  if (str != "") {
+    query_str_lst.push(str);
+  }
 }
+
+console.log('query_str_lst' + query_str_lst);
