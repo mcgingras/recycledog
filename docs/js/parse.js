@@ -29,9 +29,9 @@ for (var i = 0; i < str_array.length; i++) {
 
     // North Face - insert spaces for thenorthface
     for (var j = 0; j < store_names_lst.length; j++) {
-      var store_i = store_names_lst[i];
-      if (str == store_i[0]) {
-        str = store_i[1];
+      var store_j = store_names_lst[j];
+      if (str == store_j[0]) {
+        str = store_j[1];
       }
     }
   }
