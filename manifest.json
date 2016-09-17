@@ -1,5 +1,11 @@
 {
- "manifest_version": 2,
- "name": "brh",
- "version": "0.1"
+  "name": "BRH",
+  "description": "Low key the most fire chrome extension of all time.",
+  "version": "0.1",
+  "manifest_version": 2,
+  "app": {
+    "background": {
+      "scripts": ["content.js"]
+    }
+  }
 }
