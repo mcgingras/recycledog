@@ -2,20 +2,44 @@
 function _cb_findItemsByKeywords(root) {
   var items = root.findItemsByKeywordsResponse[0].searchResult[0].item || [];
   var html = [];
+  var count = 0;
+  var dirty;
 
   console.log('eBay query results length: ' + items.length);
 
-  html.push('<table width="100%" border="0" cellspacing="0" cellpadding="3"><tbody>');
   for (var i = 0; i < items.length; ++i) {
+    if (count%3 == 0) {
+      html.push('<div class="grid--row">');
+      dirty = true;
+    }
+
+    <div class="grid">
+      <div class="grid--img" style="background-image: url('assets/ebay.jpg');"></div>
+      <div class="grid--info">
+        <h4>J Crew Sweater</h4>
+        <h5 style="color: #000000">6%<br><span>GREEN</span></h5>
+        <h6>$32.54</h6>
+      </div>
+    </div>
+
     var item     = items[i];
     var title    = item.title;
     var pic      = item.galleryURL.toString().replace('http:','https:');
     var viewitem = item.viewItemURL;
     if (null != title && null != viewitem) {
-      html.push('<tr><td>' + '<img src="' + pic + '" border="0">' + '</td>' +
-      '<td><a href="' + viewitem + '" target="_blank">' + title + '</a></td></tr>');
+      html.push('<div class="grid"><div class="grid--img"style="background-image: url(+'pic'+)"></div><div class="grid--info"><h4>+'title'+</h4></div></div>');
+    }
+    if (count%3 == 2){
+      html.push('</div>');
+      dirty = false;
     }
   }
+
+  if (dirty) {
+    html.push('<div>');
+  }
+
+
   // If No Results
   if (items.length == 0) {
     html.push('<p>Sorry, we couldn\'t find anything.</p>');
