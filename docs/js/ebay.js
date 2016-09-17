@@ -12,8 +12,9 @@ function _cb_findItemsByKeywords(root) {
       dirty = true;
     }
 
-    console.log(item.galleryURL);
+
     var item     = items[i];
+    console.log(item.galleryURL);
     var title    = item.title;
     var price    = item.currentPrice;
     var pic      = item.galleryURL.toString().replace('http:','https:');
