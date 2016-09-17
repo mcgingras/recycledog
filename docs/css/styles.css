@@ -230,6 +230,18 @@ body{
         border-top: 1px solid #c9c9c9;;
     }
 
+    #error-msg {
+        display: block;
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 100px;
+        vertical-align: top;
+        font-family: "alma_monobold";
+        font-size: 36px;
+        text-align: center;
+    }
+
     #close {
         border: none;
         background-color: transparent;

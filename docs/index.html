@@ -9,7 +9,7 @@
 <title>Recycle Dog</title>
 
 <header class ="header">
-    <a id = "logo" class="scroll-back" href="#logo"><img src="assets/recycledog.png" alt="" /></a><a class="scroll-back" href="#logo"><span id="tag">RECYLCE DOG</span></a>
+    <a class="scroll-back" class="scroll-back" href="#logo"><img src="assets/recycledog.png" alt="" /></a><a class="scroll-back" href="#logo"><span id="tag">RECYLCE DOG</span></a>
 </header>
 
 
@@ -68,7 +68,7 @@
   </div>
   <div id="results"></div>
 
-  <div class="popover-wrapper">
+  <div class="popover-wrapper suggest">
       <div class="popover-content">
           <div class="popover-top">
               <div class="popover-header">
@@ -81,28 +81,16 @@
       </div>
   </div>
 
-<script>
-
-$("#js-rotating").Morphext({
-    // The [in] animation type. Refer to Animate.css for a list of available animations.
-    animation: "flipInX",
-    // An array of phrases to rotate are created based on this separator. Change it if you wish to separate the phrases differently (e.g. So Simple | Very Doge | Much Wow | Such Cool).
-    separator: ",",
-    // The delay between the changing of each phrase in milliseconds.
-    speed: 5000,
-    complete: function () {
-        // Called after the entrance animation is executed.
-    }
-});
-
-
-$("a[href='#logo']").click(function() {
-  $("html, body").animate({ scrollTop: 0 }, "ease-in");
-  return false;
-});
-
-</script>
-
+  <div class="popover-wrapper error">
+      <div class="popover-content">
+          <div class="popover-top">
+              <div class="popover-header">
+                  <hr><img src="assets/recycledog.png" /><hr>
+              </div>
+              <h3 id="error-msg">Sorry, we could not find matching items.</h3>
+          </div>
+      </div>
+  </div>
 
 <script type="text/javascript" src="js/yql_query.js"></script>
 <script type="text/javascript" src="js/ebay.js"></script>
