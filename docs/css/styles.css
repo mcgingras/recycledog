@@ -83,7 +83,7 @@ body{
     .header a { text-decoration: none; }
 
 .phrase{
-  margin: 120px 0px 100px 0px;
+  margin: 135px 0px 35px 0px;
   font-family: "alma_monobold";
   color: #000000;
   font-size: 36px;
@@ -156,8 +156,21 @@ body{
   width: 250px;
   background-repeat: no-repeat;
   background-size: 250px 240px;
-
+  border-radius: 5px 5px 0 0;
 }
+
+.grid--info{
+  padding: 10px 10px;
+  height: 60px;
+  width: 100%;
+  border-radius: 0 0 5px 5px;
+}
+
+.grid--info h6{
+  font-family: 'alma_monobold';
+  font-size: 12px;
+}
+
 .popover-wrapper.show {
     position: fixed;
     height: 100%;
