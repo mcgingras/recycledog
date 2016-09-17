@@ -11,7 +11,7 @@ function _cb_findItemsByKeywords(root) {
   for (var i = 0; i < items.length; ++i) {
     var item     = items[i];
     var title    = item.title;
-    var pic      = item.galleryURL;
+    var pic      = item.galleryURL.toString().replace('http:','https:');
     var viewitem = item.viewItemURL;
     console.log('pic: ' + pic);
     console.log('typeof: ' + typeof(pic));
