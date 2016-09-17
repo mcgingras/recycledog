@@ -13,7 +13,7 @@ console.log('explode: ' + exp);
 console.log('store is ' + store);
 console.log('str_array: ' + str_array);
 
-for (var i = 0; i < split_slash.length; i++) {
+for (var i = 0; i < str_array.length; i++) {
   var str = str_array[i];
   console.log('element: ' + str);
 }
