@@ -56,15 +56,3 @@ if (title_list.hasOwnProperty("responseJSON")) {
     console.log('response_json_body: ' + response_json_body);
 }
 else { console.log("responseJSON is undefined"); }
-
-$.ajax({
-     url: url,
-     dataType: 'text',
-     success: function(data) {
-          var elements = $("<div>").html(data)[0].getElementsByTagName("ul")[0].getElementsByTagName("li");
-          for(var i = 0; i < elements.length; i++) {
-               var theText = elements[i].firstChild.nodeValue;
-               console.log(theText);
-          }
-     }
-});
