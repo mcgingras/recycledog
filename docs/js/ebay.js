@@ -2,6 +2,10 @@
 function _cb_findItemsByKeywords(root) {
   var items = root.findItemsByKeywordsResponse[0].searchResult[0].item || [];
   var html = [];
+
+  console.log('root: ' + root);
+  console.log('items: ' + items);
+
   html.push('<table width="100%" border="0" cellspacing="0" cellpadding="3"><tbody>');
   for (var i = 0; i < items.length; ++i) {
     var item     = items[i];
