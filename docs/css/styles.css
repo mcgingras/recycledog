@@ -166,9 +166,31 @@ body{
   border-radius: 0 0 5px 5px;
 }
 
-.grid--info h6{
+.grid--info h4{
   font-family: 'alma_monobold';
   font-size: 12px;
+  display: inline;
+}
+
+.grid--info h6{
+  font-family: 'alma_monoregular';
+  font-size: 14px;
+  color: #797979;
+  diplay: inline;
+}
+
+.grid--info h5{
+  color: #1E5124;
+  float: right;
+  font-family: 'alma_monobold';
+  text-align: center;
+  margin-right: 20px;
+  margin-top: 3px;
+}
+
+.grid--info h5 span{
+  font-size: 9px;
+  color: black;
 }
 
 .popover-wrapper.show {

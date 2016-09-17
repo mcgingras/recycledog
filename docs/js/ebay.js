@@ -21,7 +21,7 @@ function _cb_findItemsByKeywords(root) {
     html.push('<p>Sorry, we couldn\'t find anything.</p>');
   }
   html.push('</tbody></table>');
-  document.getElementById("results").innerHTML = html.join("");
+  document.getElementById("js-body--grid").innerHTML = html.join("");
 }  // End _cb_findItemsByKeywords() function
 
 
