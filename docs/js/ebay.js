@@ -13,15 +13,6 @@ function _cb_findItemsByKeywords(root) {
       dirty = true;
     }
 
-    <div class="grid">
-      <div class="grid--img" style="background-image: url('assets/ebay.jpg');"></div>
-      <div class="grid--info">
-        <h4>J Crew Sweater</h4>
-        <h5 style="color: #000000">6%<br><span>GREEN</span></h5>
-        <h6>$32.54</h6>
-      </div>
-    </div>
-
     var item     = items[i];
     var title    = item.title;
     var pic      = item.galleryURL.toString().replace('http:','https:');
