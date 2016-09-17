@@ -22,7 +22,7 @@ for (var i = 0; i < str_array.length; i++) {
 
   // replace www.company_name.com with just company_name
   if (str.includes('www.'+store_name)) {
-    str_array[i] = store_name
+    str = store_name
   }
 
   // remove empty elements
