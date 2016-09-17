@@ -9,10 +9,10 @@ var yql_results = "";
 var query_str_lst = [];
 var url = get('url');
 // url = "http://www.patagonia.com/product/mens-nano-air-hoody/84260.html?dwvar_84260_color=GCB&cgid=mens-jackets-vests#start=1";
-var str_array = url.split('/');
+var str_array = url.split("/");
 
 // Get store name from website name
-var exp = url.split('.');
+var exp = url.split(".");
 var store_name = exp[1];
 
 console.log('url: ' + url);
@@ -33,7 +33,7 @@ for (var i = 0; i < str_array.length; i++) {
   }
 
   // remove empty elements and 'https'
-  if (str != "" && str != 'https:') {
+  if (str != "" || str != 'https:') {
     query_str_lst.push(str);
   }
 }
