@@ -54,17 +54,17 @@ var yql_query = 'SELECT * FROM html WHERE url="'+url+'"';
 
 var query_url = "https://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20html%20where%20url%3D%22"+encodeURIComponent(url)+"https%3A%2F%2Fwww.jcrew.com%2Fmens_category%2Fsweaters%2FJCrewcashmere%2FPRDOVR~F3994%2FF3994.jsp%22&format=json&diagnostics=true&callback=";
 
-var title_list = $.getJSON(query_url);
-console.log(Object.keys(title_list));
-
-if (title_list.hasOwnProperty("responseJSON")) {
-    var response_json_body = title_list.responseJSON.query.results.body;
-    console.log('response_json_body: ' + response_json_body);
-}
-else { console.log("responseJSON is undefined"); }
-
-var response = setTimeout(function() {
-    return title_list.responseJSON.query.results.body;
-}, 100);
-
-console.log(response);
+// var title_list = $.getJSON(query_url);
+// console.log(Object.keys(title_list));
+//
+// if (title_list.hasOwnProperty("responseJSON")) {
+//     var response_json_body = title_list.responseJSON.query.results.body;
+//     console.log('response_json_body: ' + response_json_body);
+// }
+// else { console.log("responseJSON is undefined"); }
+//
+// var response = setTimeout(function() {
+//     return title_list.responseJSON.query.results.body;
+// }, 100);
+//
+// console.log(response);
