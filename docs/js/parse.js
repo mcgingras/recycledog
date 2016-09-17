@@ -24,6 +24,7 @@ for (var i = 0; i < str_array.length; i++) {
   if (str.includes('www.'+store_name)) {
     str = store_name;
 
+    console.log('store_name: ' + store_name);
     // North Face - insert spaces for thenorthface
     if (str = "thenorthface") {
       str = "the north face";
