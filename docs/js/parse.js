@@ -14,6 +14,8 @@ var str_array = url.split("/");
 var exp = url.split(".");
 var store_name = exp[1];
 
+console.log('str_array: ' + str_array);
+
 for (var i = 0; i < str_array.length; i++) {
   var str = str_array[i];
 
@@ -35,6 +37,8 @@ for (var i = 0; i < str_array.length; i++) {
     query_str_lst.push(str);
   }
 }
+
+console.log('query_str_lst: ' + query_str_lst);
 
 // Run eBay query
 run_ebay_query(query_str_lst);
