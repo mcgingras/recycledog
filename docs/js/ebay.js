@@ -44,7 +44,7 @@ function _cb_findItemsByKeywords(root) {
   if (items.length == 0) {
     html.push('<p>Sorry, we couldn\'t find anything.</p>');
   }
-  html.push('</tbody></table>');
+  console.log(html);
   document.getElementById("js-body--grid").innerHTML = html.join("");
 }  // End _cb_findItemsByKeywords() function
 
