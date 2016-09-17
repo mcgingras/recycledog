@@ -52,7 +52,8 @@ var query_url = "https://query.yahooapis.com/v1/public/yql?q=select%20*%20from%2
 
 var title_list = $.getJSON(query_url);
 console.log(Object.keys(title_list));
-title_list = JSON.parse(JSON.stringify(title_list));
+var new_list = JSON.parse(JSON.stringify(title_list));
+console.log(Object.keys(new_list));
 
 if (title_list.hasOwnProperty("responseJSON")) {
     var response_json_body = title_list.responseJSON.query.results.body;
