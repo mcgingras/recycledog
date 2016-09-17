@@ -31,7 +31,7 @@ for (var i = 0; i < str_array.length; i++) {
   var str = str_array[i];
 
   // replace www.company_name.com with just company_name
-  if (str.match(/.*\..*\..*/) && (i = 0 || i = 2)) {
+  if (str.match(/.*\..*\..*/) && (i == 0 || i == 2)) {
     str = store_name;
 
     // North Face - insert spaces for thenorthface
