@@ -1,0 +1,11 @@
+1) JCrew
+	- jcrew
+	- mens/womens/boys/girls category
+	- article of clothing (i.e. shirts)
+	- specific name of clothing (i.e. BrushedTwillShirts) 
+	- product number (add "item ...")
+
+2) H&M
+
+
+3)

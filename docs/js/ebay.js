@@ -3,9 +3,7 @@ function _cb_findItemsByKeywords(root) {
   var items = root.findItemsByKeywordsResponse[0].searchResult[0].item || [];
   var html = [];
 
-  console.log('root: ' + root);
-  console.log('root.findItemsByKeywordsResponse[0]: ' + root.findItemsByKeywordsResponse[0]);
-  console.log('items: ' + items);
+  console.log('eBay query results length: ' + items.length);
 
   html.push('<table width="100%" border="0" cellspacing="0" cellpadding="3"><tbody>');
   for (var i = 0; i < items.length; ++i) {
@@ -17,6 +15,10 @@ function _cb_findItemsByKeywords(root) {
       html.push('<tr><td>' + '<img src="' + pic + '" border="0">' + '</td>' +
       '<td><a href="' + viewitem + '" target="_blank">' + title + '</a></td></tr>');
     }
+  }
+  // If No Results
+  if (items.length == 0) {
+    html.push('<p>Sorry, we couldn\'t find anything.</p>');
   }
   html.push('</tbody></table>');
   document.getElementById("results").innerHTML = html.join("");
@@ -70,13 +72,9 @@ function _cb_findItemsByKeywords(root) {
 // buildURLArray(filterarray);
 
 function run_ebay_query(query_str_lst) {
-  console.log('run ebay query');
   // Construct query keywords
   var keywords = '&keywords=' + query_str_lst.join('%20').replace(/ /g,'%20');
-  console.log('all keywords: ' + keywords)
-  keywords = '&keywords=' + query_str_lst.slice(0,2).join('%20').replace(/ /g,'%20');    // CHANGE LATER***************
-  keywords = '&keywords=' + query_str_lst[0].replace(/ /g,'%20');    // CHANGE LATER***************
-  console.log('keywords: ' + keywords);
+  console.log('eBay query SEARCH: ' + keywords);
 
   // Construct the request
   var url = "https://svcs.ebay.com/services/search/FindingService/v1";
@@ -87,7 +85,7 @@ function run_ebay_query(query_str_lst) {
       url += "&RESPONSE-DATA-FORMAT=JSON";
       url += "&callback=_cb_findItemsByKeywords";
       url += "&REST-PAYLOAD";
-      url += "&keywords=polo%20tshirt";
+      url += keywords;
       url += "&paginationInput.entriesPerPage=5";
 
   // Submit the request
