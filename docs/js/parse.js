@@ -8,17 +8,11 @@ function get(name) {
 var yql_results = "";
 var query_str_lst = [];
 var url = get('url');
-// url = "http://www.patagonia.com/product/mens-nano-air-hoody/84260.html?dwvar_84260_color=GCB&cgid=mens-jackets-vests#start=1";
 var str_array = url.split("/");
 
 // Get store name from website name
 var exp = url.split(".");
 var store_name = exp[1];
-
-// console.log('url: ' + url);
-// console.log('explode: ' + exp);
-// console.log('store is ' + store_name);
-// console.log('str_array: ' + str_array);
 
 for (var i = 0; i < str_array.length; i++) {
   var str = str_array[i];
@@ -37,14 +31,10 @@ for (var i = 0; i < str_array.length; i++) {
   str = str.replace(/_/g,' ');
 
   // remove empty elements and 'https'
-  if (str != "" && str != 'https:') {
+  if (str != "" && !str.includes('http')) {
     query_str_lst.push(str);
   }
 }
-
-document.getElementById('js-url').innerHTML = query_str_lst;
-
-console.log('query_str_lst: ' + query_str_lst);
 
 // Run eBay query
 run_ebay_query(query_str_lst);

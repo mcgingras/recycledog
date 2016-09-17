@@ -1,0 +1,26 @@
+1) JCrew
+	- jcrew
+	- mens/womens/boys/girls category
+	- article of clothing (i.e. shirts)
+	- specific name of clothing (i.e. BrushedTwillShirts) 
+	- product number (add "item ...")
+
+2) NorthFace
+	- thenorthface (add in %20)
+	- parse out /shop/
+	- mens/womens/kids/shoes/equipment
+	- parse out article of clothing (concat on previous, i.e. "mens-jackets-vests")
+	- another category (concat on previous, i.e. "mens-jackets-vests-insulated")
+	- item (separated by /item-name)
+	- parse out string before and after ?
+
+
+3) Patagonia
+
+
+4) Adidas
+
+
+5) Nike
+
+
