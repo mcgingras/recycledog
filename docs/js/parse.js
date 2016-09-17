@@ -5,15 +5,15 @@ function get(name) {
 
 var url = get('url');
 var exp = url.split('.');
-var split_slash = url.split('/');
+var str_array = url.split('/');
 var store = exp[1];
 
 console.log('url: ' + url);
 console.log('explode: ' + exp);
 console.log('store is ' + store);
-console.log('split_slash: ' + split_slash);
+console.log('str_array: ' + str_array);
 
-for (s in split_slash) {
-  console.log('element: ' + s);
-  
+for (var i = 0; i < split_slash.length; i++) {
+  var str = str_array[i];
+  console.log('element: ' + str);
 }
