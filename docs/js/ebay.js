@@ -2,13 +2,12 @@
 function _cb_findItemsByKeywords(root) {
   var items = root.findItemsByKeywordsResponse[0].searchResult[0].item || [];
   var html = [];
-  var count = 0;
   var dirty;
 
   console.log('eBay query results length: ' + items.length);
 
   for (var i = 0; i < items.length; ++i) {
-    if (count%3 == 0) {
+    if (i%3 == 0) {
       html.push('<div class="grid--row">');
       console.log(html);
       dirty = true;
@@ -22,12 +21,11 @@ function _cb_findItemsByKeywords(root) {
       html.push('<div class="grid"></div>');
     }
 
-    if (count%3 == 2){
+    if (i%3 == 2){
       html.push('</div>');
       dirty = false;
     }
 
-    count++;
   }
 
   if (dirty) {
