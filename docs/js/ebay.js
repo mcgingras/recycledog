@@ -17,7 +17,7 @@ function _cb_findItemsByKeywords(root) {
     var title    = item.title;
     var price    = item.currentPrice;
     var pic      = item.galleryURL.toString().replace('http:','https:');
-    console.log("pic value is" +pic +"and has type"+typeOf(pic));
+    console.log("pic value is" +pic +"and has type"+typeof(pic));
     var viewitem = item.viewItemURL;
     if (null != title && null != viewitem) {
       html.push('<div class="grid"><div class="grid--img" style="background-image: url("'+pic+'")"></div><div class="grid--info"><h4>'+title+'</h4></div></div>');
