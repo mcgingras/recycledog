@@ -24,6 +24,10 @@ $(document).ready(function() {
         $(".popover-wrapper").removeClass("show");
     });
 
+    $("#cheer-up").on("click", function() {
+        $(".popover-wrapper").removeClass("show");
+    });
+
     $(".scroll-back").click(function() {
       $("html, body").animate({ scrollTop: 0 }, "ease-in");
       return false;
