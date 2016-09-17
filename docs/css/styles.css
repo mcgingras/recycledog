@@ -39,6 +39,7 @@ body{
 }
 
 .header{
+  z-index: 1;
   position: fixed;
   top: 0px;
   height: 80px;
@@ -51,10 +52,35 @@ body{
   box-shadow: 0px 4px 6px 0px rgba(0,0,0,0.19);
 }
 
-.header img{
-  max-height: 60px;
-  max-width: 60px;
+    .header img {
+      max-height: 60px;
+      max-width: 60px;
+    }
+
+    .header span { display: none; }
+
+.header.min {
+    display: flex;
+    align-items: center;
+    padding-left: 15px;
+    justify-content: initial;
+    height: 60px;
+    position: fixed;
+    top: 0;
 }
+    .header.min img {
+        max-height: 40px;
+        max-width: 40px;
+    }
+    .header.min span {
+        display: block;
+        margin-left: 15px;
+        font-family: "alma_monobold";
+        color: #000000;
+        font-size: 16px;
+        padding-top: 4px;
+    }
+    .header a { text-decoration: none; }
 
 .phrase{
   margin: 120px 0px 100px 0px;
@@ -134,9 +160,10 @@ body{
     left: 0;
     top: 0;
     background-color: rgba(216, 216, 216, 0.8);
+    z-index: 2;
 }
 
-.popover-wrapper.hide {
+.popover-wrapper {
     display: none;
 }
 
