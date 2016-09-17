@@ -18,10 +18,11 @@ function _cb_findItemsByKeywords(root) {
       '<td><a href="' + viewitem + '" target="_blank">' + title + '</a></td></tr>');
     }
   }
-  html.push('</tbody></table>');
+  // If No Results
   if (items.length = 0) {
     html.push('<p>Sorry, we couldn\'t find anything.</p>');
   }
+  html.push('</tbody></table>');
   document.getElementById("results").innerHTML = html.join("");
 }  // End _cb_findItemsByKeywords() function
 
