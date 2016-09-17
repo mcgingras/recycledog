@@ -3,7 +3,7 @@ function _cb_findItemsByKeywords(root) {
   var items = root.findItemsByKeywordsResponse[0].searchResult[0].item || [];
   var html = [];
 
-  console.log('items length: ' + items.length);
+  console.log('eBay query results length: ' + items.length);
 
   html.push('<table width="100%" border="0" cellspacing="0" cellpadding="3"><tbody>');
   for (var i = 0; i < items.length; ++i) {
@@ -17,9 +17,7 @@ function _cb_findItemsByKeywords(root) {
     }
   }
   // If No Results
-  console.log('items.length: ' + items.length);
   if (items.length == 0) {
-    console.log('PUSCH html');
     html.push('<p>Sorry, we couldn\'t find anything.</p>');
   }
   html.push('</tbody></table>');
@@ -74,10 +72,9 @@ function _cb_findItemsByKeywords(root) {
 // buildURLArray(filterarray);
 
 function run_ebay_query(query_str_lst) {
-  console.log('run ebay query');
   // Construct query keywords
   var keywords = '&keywords=' + query_str_lst.join('%20').replace(/ /g,'%20');
-  console.log('SEARCH: ' + keywords);
+  console.log('eBay query SEARCH: ' + keywords);
 
   // Construct the request
   var url = "https://svcs.ebay.com/services/search/FindingService/v1";
