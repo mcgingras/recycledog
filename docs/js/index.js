@@ -19,7 +19,7 @@ $(document).ready(function() {
     });
 
     /*--------------------Event_Handlers--------------------*/
-    
+
     $("#close").on("click", function() {
         $(".popover-wrapper").removeClass("show");
     });
@@ -36,7 +36,7 @@ $(document).ready(function() {
             $(".header").addClass("min");
             header_init_pos = false;
         }
-        else if (!header_init_pos && scroll_pos <= scroll_target) {
+        else if (!header_init_pos && scroll_pos <= scroll_target && scroll_pos != 0) {
             $(".header").removeClass("min");
             header_init_pos = true;
         }
