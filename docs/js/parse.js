@@ -32,6 +32,15 @@ for (var i = 0; i < str_array.length; i++) {
   // replace underscores with space
   str = str.replace(/_/g,' ');
 
+  // NORTH FACE remove -text?stuff
+  if (store_name == 'thenorthface') {
+    console.log('parse northface');
+    if (str.includes('?')) {
+      last_index = str.lastIndexOf('-');
+      str = str.substring(0,last_index);
+    }
+  }
+
   // remove empty elements and 'https'
   if (str != "" && !str.includes('http')) {
     query_str_lst.push(str);
