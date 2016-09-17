@@ -42,6 +42,8 @@ var yql_query = 'SELECT * FROM html WHERE url="'+url+'"';
 var query_url = "https://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20"+encodeURIComponent(url)+"%22&format=json&diagnostics=true&callback=";
 
 var title_list = $.getJSON(query_url);
+console.log("title_list: type:" + typeof(title_list));
+console.log(title_list.responseJSON);
 var response_json = title_list.responseJSON.query.results.body;
 console.log('encode url: ' + encodeURIComponent(url));
 console.log('response_json: ' + response_json);
