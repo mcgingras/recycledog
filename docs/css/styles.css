@@ -1,3 +1,31 @@
+@font-face {
+    font-family: 'alma_monobold';
+    src: url('../assets/almamono-bold-webfont.woff2') format('woff2'),
+         url('../assets/almamono-bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'alma_monolight';
+    src: url('../assets/almamono-light-webfont.woff2') format('woff2'),
+         url('../assets/almamono-light-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'alma_monoregular';
+    src: url('../assets/almamono-regular-webfont.woff2') format('woff2'),
+         url('../assets/almamono-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
 *{
   margin: 0;
   padding: 0;
@@ -9,11 +37,21 @@ body{
 
 .header{
   height: 60px;
+  width: 100%;
   background-color: #FFFFFF;
   border-bottom: 2px solid #c9c9c9;
   display: flex;
   justify-content: center;
   box-shadow: 0px 4px 6px 0px rgba(0,0,0,0.19);
+}
+
+.phrase{
+  margin: 50px auto;
+  font-family: "alma_monobold";
+  color: #000000;
+  font-size: 36px;
+  text-align: center;
+
 }
 
 .header img{
