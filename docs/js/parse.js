@@ -3,6 +3,8 @@ function get(name) {
     return decodeURIComponent(name[1]);
 }
 
+
+
 var yql_results = "";
 var query_str_lst = [];
 var url = get('url');
@@ -35,4 +37,16 @@ for (var i = 0; i < str_array.length; i++) {
 console.log('query_str_lst: ' + query_str_lst);
 
 // QUERY Yahoo Query Language to get website data
-yql_query = 'SELECT * FROM html WHERE url="'+url+'"';
+var yql_query = 'SELECT * FROM html WHERE url="'+url+'"';
+
+// Define your callback:
+var callback = function(data) {
+    var post = data.query.results.item;
+    alert(post.title);
+};
+
+// Instantiate with the query:
+var firstFeedItem = new YQLQuery(yql_query, callback);
+
+// If you're ready then go:
+firstFeedItem.fetch(); // Go!!
