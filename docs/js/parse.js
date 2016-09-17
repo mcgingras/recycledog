@@ -3,6 +3,7 @@ function get(name) {
     return decodeURIComponent(name[1]);
 }
 
+var yql_results = "";
 var query_str_lst = [];
 var url = get('url');
 var str_array = url.split('/');
@@ -22,7 +23,7 @@ for (var i = 0; i < str_array.length; i++) {
 
   // replace www.company_name.com with just company_name
   if (str.includes('www.'+store_name)) {
-    str = store_name
+    str = store_name;
   }
 
   // remove empty elements and 'https'
@@ -32,3 +33,6 @@ for (var i = 0; i < str_array.length; i++) {
 }
 
 console.log('query_str_lst: ' + query_str_lst);
+
+// QUERY Yahoo Query Language to get website data
+yql_query = 'SELECT * FROM html WHERE url="'+url+'"';
