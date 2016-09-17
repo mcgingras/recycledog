@@ -24,13 +24,59 @@ function _cb_findItemsByKeywords(root) {
   document.getElementById("results").innerHTML = html.join("");
 }  // End _cb_findItemsByKeywords() function
 
+// // Create a JavaScript array of the item filters you want to use in your request
+// var filterarray = [
+//   {"name":"MaxPrice",
+//    "value":"25",
+//    "paramName":"Currency",
+//    "paramValue":"USD"},
+//   {"name":"FreeShippingOnly",
+//    "value":"true",
+//    "paramName":"",
+//    "paramValue":""},
+//   {"name":"ListingType",
+//    "value":["AuctionWithBIN", "FixedPrice"],
+//    "paramName":"",
+//    "paramValue":""},
+//   ];
 
+// // Define global variable for the URL filter
+// var urlfilter = "";
+
+// // Generates an indexed URL snippet from the array of item filters
+// function  buildURLArray() {
+//   // Iterate through each filter in the array
+//   for(var i=0; i<filterarray.length; i++) {
+//     //Index each item filter in filterarray
+//     var itemfilter = filterarray[i];
+//     // Iterate through each parameter in each item filter
+//     for(var index in itemfilter) {
+//       // Check to see if the paramter has a value (some don't)
+//       if (itemfilter[index] !== "") {
+//         if (itemfilter[index] instanceof Array) {
+//           for(var r=0; r<itemfilter[index].length; r++) {
+//           var value = itemfilter[index][r];
+//           urlfilter += "&itemFilter\(" + i + "\)." + index + "\(" + r + "\)=" + value ;
+//           }
+//         }
+//         else {
+//           urlfilter += "&itemFilter\(" + i + "\)." + index + "=" + itemfilter[index];
+//         }
+//       }
+//     }
+//   }
+// }  // End buildURLArray() function
+
+//   url += urlfilter;
+
+// Execute the function to build the URL filter
+// buildURLArray(filterarray);
 
 function run_ebay_query(query_str_lst) {
   // Construct query keywords
-  var keywords = '&keywords=' + query_str_lst[0];
+  var keywords = '&keywords=' + query_str_lst[0].replace(/ /g,'%20');
   if (query_str_lst.length > 1) {
-    keywords += '%20(' + query_str_lst.slice(1,query_str_lst.length).join(',').replace(/ /g,',') + ')';
+    keywords += '%20(' + query_str_lst.slice(1,query_str_lst.length).join(',').replace(/ /g,'%20') + ')';
   }
   // keywords += query_str_lst[0];  + query_str_lst.join('%20').replace(/ /g,'%20');
   // keywords = '&keywords=(' + query_str_lst.join(',').replace(/ /g,',') + ')';
