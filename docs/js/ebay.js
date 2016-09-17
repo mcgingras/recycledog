@@ -17,7 +17,7 @@ function _cb_findItemsByKeywords(root) {
     }
   }
   // If No Results
-  if (items.length = 0) {
+  if (items.length == 0) {
     html.push('<p>Sorry, we couldn\'t find anything.</p>');
   }
   html.push('</tbody></table>');
