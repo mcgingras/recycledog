@@ -37,7 +37,7 @@ for (var i = 0; i < str_array.length; i++) {
   str = str.replace(/_/g,' ');
 
   // remove empty elements and 'https'
-  if (str != "" && str != 'https:') {
+  if (str != "" && !str.match('http*:') {
     query_str_lst.push(str);
   }
 }
