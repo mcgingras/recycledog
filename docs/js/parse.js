@@ -29,9 +29,7 @@ for (var i = 0; i < str_array.length; i++) {
     str = str.split(".")[0];
   }
 
-  // replace underscores with space
-  str = str.replace(/_/g,' ');
-
+console.log('store_name: ' + store_name);
   // NORTH FACE remove -text?stuff
   if (store_name == 'thenorthface') {
     console.log('parse northface');
@@ -40,6 +38,12 @@ for (var i = 0; i < str_array.length; i++) {
       str = str.substring(0,last_index);
     }
   }
+
+  // replace underscores with space
+  str = str.replace(/_/g,' ');
+
+  // replace dash (-) with space
+  str = str.replace(/-/g,' ');
 
   // remove empty elements and 'https'
   if (str != "" && !str.includes('http')) {
