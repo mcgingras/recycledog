@@ -34,7 +34,7 @@ for (var i = 0; i < str_array.length; i++) {
   }
 
   // replace underscores with space
-  str = str.replace('_',' ');
+  str = str.replace(/_/g,' ');
 
   // remove empty elements and 'https'
   if (str != "" && str != 'https:') {
