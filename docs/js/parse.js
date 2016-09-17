@@ -28,9 +28,13 @@ for (var i = 0; i < str_array.length; i++) {
     str = store_name;
   }
 
+  // remove .com at end
   if(str.includes(".")) {
     str = str.split(".")[0];
   }
+
+  // replace underscores with space
+  str = str.replace('_',' ');
 
   // remove empty elements and 'https'
   if (str != "" && str != 'https:') {
