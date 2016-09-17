@@ -49,8 +49,8 @@ function  buildURLArray() {
       if (itemfilter[index] !== "") {
         if (itemfilter[index] instanceof Array) {
           for(var r=0; r<itemfilter[index].length; r++) {
-          var value = itemfilter[index][r];
-          urlfilter += "&itemFilter\(" + i + "\)." + index + "\(" + r + "\)=" + value ;
+            var value = itemfilter[index][r];
+            urlfilter += "&itemFilter\(" + i + "\)." + index + "\(" + r + "\)=" + value ;
           }
         }
         else {
@@ -82,6 +82,3 @@ var url = "https://svcs.ebay.com/services/search/FindingService/v1";
 s=document.createElement('script'); // create script element
 s.src= url;
 document.body.appendChild(s);
-
-// Display the request as a clickable link for testing
-document.write("<a href=\"" + url + "\">" + url + "</a>");
