@@ -64,7 +64,7 @@ if (title_list.hasOwnProperty("responseJSON")) {
 else { console.log("responseJSON is undefined"); }
 
 var response = setTimeout(function() {
-    return title_list.responseJSON;
+    return title_list.responseJSON.query.results.body;
 }, 100);
 
 console.log(response);
