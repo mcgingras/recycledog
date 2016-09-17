@@ -1,5 +1,8 @@
 <script src = "js/jquery-3.1.0.min.js" type = "text/javascript"></script>
 <link rel="stylesheet" href="css/styles.css">
+<link rel="stylesheet" href="css/animate.css">
+<link rel="stylesheet" href="bower_components/Morphext/dist/morphext.css">
+<script src="bower_components/Morphext/dist/morphext.min.js"></script>
 
 
 <header class ="header">
@@ -9,7 +12,7 @@
 
   <div class ="main">
 
-    <h3 class="phrase">Yo, Recycle Dog.</h3>
+    <h3 class="phrase">Yo, <span id="js-rotating">Recycle, Reuse, Reimagine</span> Dog.</h3>
 
     <div class="body clearfix">
 
@@ -47,6 +50,21 @@
   <div id="results"></div>
 
 
+<script>
+
+$("#js-rotating").Morphext({
+    // The [in] animation type. Refer to Animate.css for a list of available animations.
+    animation: "flipInX",
+    // An array of phrases to rotate are created based on this separator. Change it if you wish to separate the phrases differently (e.g. So Simple | Very Doge | Much Wow | Such Cool).
+    separator: ",",
+    // The delay between the changing of each phrase in milliseconds.
+    speed: 5000,
+    complete: function () {
+        // Called after the entrance animation is executed.
+    }
+});
+
+</script>
 
 
 <script type="text/javascript" src="js/yql_query.js"></script>
