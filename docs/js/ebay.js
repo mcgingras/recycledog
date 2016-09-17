@@ -13,8 +13,6 @@ function _cb_findItemsByKeywords(root) {
     var title    = item.title;
     var pic      = item.galleryURL.toString().replace('http:','https:');
     var viewitem = item.viewItemURL;
-    console.log('pic: ' + pic);
-    console.log('typeof: ' + typeof(pic));
     if (null != title && null != viewitem) {
       html.push('<tr><td>' + '<img src="' + pic + '" border="0">' + '</td>' +
       '<td><a href="' + viewitem + '" target="_blank">' + title + '</a></td></tr>');
