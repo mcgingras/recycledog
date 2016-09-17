@@ -10,6 +10,7 @@ function _cb_findItemsByKeywords(root) {
   for (var i = 0; i < items.length; ++i) {
     if (count%3 == 0) {
       html.push('<div class="grid--row">');
+      console.log(html);
       dirty = true;
     }
 
