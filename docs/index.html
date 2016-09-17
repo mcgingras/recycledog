@@ -1,3 +1,16 @@
 <script src = "js/jquery-3.1.0.min.js" type = "text/javascript"></script>
 
 <div>this is some text</div>
+
+<script>
+  alert("hello");
+
+  function get(name){
+    if(name=(new RegExp('[?&]'+encodeURIComponent(name)+'=([^&]*)')).exec(location.search))
+      return decodeURIComponent(name[1]);
+  }
+
+  var url = get('foo');
+
+  alert("url: " + url);
+</script>
