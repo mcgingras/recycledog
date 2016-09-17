@@ -3,10 +3,13 @@
 <div>this is some text</div>
 
 <script>
+
   function get(name){
     if(name=(new RegExp('[?&]'+encodeURIComponent(name)+'=([^&]*)')).exec(location.search))
       return decodeURIComponent(name[1]);
   }
+
+  alert("current url: " + window.location.search);
 
   var url = get('url');
 
