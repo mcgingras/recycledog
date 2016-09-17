@@ -42,6 +42,8 @@ var yql_query = 'SELECT * FROM html WHERE url="'+url+'"';
 // Define your callback:
 var callback = function(data) {
     var post = data.query.results.item;
+    console.log("post: " + post);
+    console.log("data.query.results: " + data.query.results.item);
     alert(post.title);
 };
 
