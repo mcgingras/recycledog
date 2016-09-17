@@ -41,9 +41,10 @@ var yql_query = 'SELECT * FROM html WHERE url="'+url+'"';
 
 var query_url = "https://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20html%20where%20url%3D%22http%3A%2F%2Fstackoverflow.com%22&format=json&diagnostics=true&callback="
 
-var titleList = $.getJSON(query_url);
+var title_List = $.getJSON(query_url);
+var response_json = title_list.resonseJSON.query.results.body;
 
-console.log('titleList: ' + titleList);
+console.log('response_json: ' + response_json);
 
 // // Define your callback:
 // var callback = function(data) {
