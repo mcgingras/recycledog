@@ -21,7 +21,6 @@ console.log('str_array: ' + str_array);
 
 for (var i = 0; i < str_array.length; i++) {
   var str = str_array[i];
-  console.log('element: ' + str);
 
   // replace www.company_name.com with just company_name
   if (str.includes('www.'+store_name)) {
@@ -51,17 +50,3 @@ console.log(title_list.responseJSON);
 var response_json = title_list.responseJSON.query.results.body;
 console.log('encode url: ' + encodeURIComponent(url));
 console.log('response_json: ' + response_json);
-
-// // Define your callback:
-// var callback = function(data) {
-//     var post = data.query.results.item;
-//     console.log("post: " + post);
-//     console.log("data.query.results: " + data.query.results.item);
-//     alert(post.title);
-// };
-
-// Instantiate with the query:
-// var firstFeedItem = new YQLQuery(yql_query, callback);
-
-// If you're ready then go:
-// firstFeedItem.fetch(); // Go!!
