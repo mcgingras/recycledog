@@ -14,7 +14,7 @@ function _cb_findItemsByKeywords(root) {
     }
   }
   html.push('</tbody></table>');
-  document.getElementById("results").innerHTML = html.join("");
+  // document.getElementById("results").innerHTML = html.join("");
 }  // End _cb_findItemsByKeywords() function
 
 // Create a JavaScript array of the item filters you want to use in your request
