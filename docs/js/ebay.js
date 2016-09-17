@@ -29,7 +29,7 @@ function _cb_findItemsByKeywords(root) {
   }
 
   if (dirty) {
-    html.push('<div>');
+    html.push('</div>');
   }
 
 
