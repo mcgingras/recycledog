@@ -28,7 +28,7 @@ for (var i = 0; i < str_array.length; i++) {
     str = store_name;
 
     // North Face - insert spaces for thenorthface
-    for (var i = 0; i < store_names_lst.length; i++) {
+    for (var j = 0; j < store_names_lst.length; j++) {
       var store_i = store_names_lst[i];
       if (str == store_i[0]) {
         str = store_i[1];
