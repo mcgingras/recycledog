@@ -166,12 +166,11 @@ body{
   border-radius: 0 0 5px 5px;
 }
 
-.grid--info h4{
+.grid--info-h4{
   font-family: 'alma_monobold';
   font-size: 12px;
-  display: inline;
   max-width: 200px;
-  overflow-x: hidden;
+  text-overflow: ellipsis;
 }
 
 .grid--info h6{
