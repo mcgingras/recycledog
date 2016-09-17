@@ -68,6 +68,7 @@ function run_ebay_query(query_str_lst) {
   console.log('run ebay query');
   // Construct query keywords
   var keywords = '&keywords=' + query_str_lst.join('%20');
+  keywords = '&keywords='+query_str_lst[0];    // CHANGE LATER***************
   console.log('keywords: ' + keywords);
 
   // Construct the request
@@ -79,7 +80,7 @@ function run_ebay_query(query_str_lst) {
       url += "&RESPONSE-DATA-FORMAT=JSON";
       url += "&callback=_cb_findItemsByKeywords";
       url += "&REST-PAYLOAD";
-      url += "&keywords=jcrew";
+      url += keywords;
       url += "&paginationInput.entriesPerPage=5";
 
 
