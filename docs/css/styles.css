@@ -72,7 +72,6 @@ body{
 .body--title{
   font-family: 'alma_monoregular';
   font-size: 12px;
-  margin-bottom: 10px;
 }
 
 .body--grid{
@@ -87,7 +86,7 @@ body{
 
 .grid{
   width: 250px;
-  height: 250px;
+  height: 275px;
   background-color: white;
   float: left;
 }
