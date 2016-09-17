@@ -55,10 +55,8 @@ console.log(Object.keys(title_list));
 var new_list = JSON.parse(JSON.stringify(title_list));
 console.log(Object.keys(new_list));
 
-var exists = title_list.hasOwnProperty("responseJSON");
-while(!exists) {
-    console.log("responseJSON is undefined");
-    exists = title_list.hasOwnProperty("responseJSON");
+if (title_list.hasOwnProperty("responseJSON")) {
+    var response_json_body = title_list.responseJSON.query.results.body;
+    console.log('response_json_body: ' + response_json_body);
 }
-var response_json_body = title_list.responseJSON.query.results.body;
-console.log('response_json_body: ' + response_json_body);
+else { console.log("responseJSON is undefined"); }
