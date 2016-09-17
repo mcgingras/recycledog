@@ -79,7 +79,7 @@ function run_ebay_query(query_str_lst) {
       url += "&RESPONSE-DATA-FORMAT=JSON";
       url += "&callback=_cb_findItemsByKeywords";
       url += "&REST-PAYLOAD";
-      url += "&keywords=harry%20potter";
+      url += keywords;
       url += "&paginationInput.entriesPerPage=5";
 
 
