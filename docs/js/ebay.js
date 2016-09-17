@@ -19,6 +19,9 @@ function _cb_findItemsByKeywords(root) {
     }
   }
   html.push('</tbody></table>');
+  if (items.length = 0) {
+    html.push('<p>Sorry, we couldn\'t find anything.</p>');
+  }
   document.getElementById("results").innerHTML = html.join("");
 }  // End _cb_findItemsByKeywords() function
 
