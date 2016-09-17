@@ -6,7 +6,7 @@ function get(name) {
 // List of stores [urlname,actual name] (name we want in qury is on the right)
 var store_names_lst = [
   ["thenorthface","north face"]
-]
+];
 
 
 
