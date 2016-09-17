@@ -81,4 +81,4 @@ var url = "https://svcs.ebay.com/services/search/FindingService/v1";
 // Submit the request
 s=document.createElement('script'); // create script element
 s.src= url;
-document.body.appendChild(s);
+// document.body.appendChild(s);
