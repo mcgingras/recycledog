@@ -41,7 +41,7 @@ var yql_query = 'SELECT * FROM html WHERE url="'+url+'"';
 
 var query_url = "http://query.yahooapis.com/v1/public/yql?q=select%20title%20from%20html%20where%20url%3D%22http%3A%2F%2Fstackoverflow.com%22%20and%0A%20%20%20%20%20%20xpath%3D'%2F%2Fdiv%2Fh3%2Fa'%0A%20%20%20%20&format=json&callback=cbfunc"
 
-var titleList = $.getJSON(theAboveUrl);
+var titleList = $.getJSON(query_url);
 
 console.log('titleList: ' + titleList);
 
