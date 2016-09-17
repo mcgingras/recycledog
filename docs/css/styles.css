@@ -154,7 +154,8 @@ body{
 .grid--img{
   height: 240px;
   width: 250px;
-  background-size: url('assets/ebay.jpg');
+  background-repeat: no-repeat;
+  background-size: 250px 240px;
 
 }
 .popover-wrapper.show {
