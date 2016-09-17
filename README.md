@@ -1,7 +1,7 @@
 # bigredhacks
 brh '16
 
-Current name: Salvage Searcher (recycledog.com)
+Current name: Salvage Searcher (recycledog.com) Syft
 
 Stuff that we should search on:
   Websites:

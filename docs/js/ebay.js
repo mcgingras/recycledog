@@ -65,7 +65,7 @@ function  buildURLArray() {
 buildURLArray(filterarray);
 
 // Construct the request
-var url = "http://svcs.ebay.com/services/search/FindingService/v1";
+var url = "https://svcs.ebay.com/services/search/FindingService/v1";
     url += "?OPERATION-NAME=findItemsByKeywords";
     url += "&SERVICE-VERSION=1.0.0";
     url += "&SECURITY-APPNAME=BrandonW-bhr-PRD-12f4c750a-2d64e0f2";
