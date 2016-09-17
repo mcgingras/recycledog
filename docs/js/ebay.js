@@ -80,7 +80,6 @@ function run_ebay_query(query_str_lst) {
       url += "&REST-PAYLOAD";
       url += keywords;
       url += "&paginationInput.entriesPerPage=3";
-      url += urlfilter;
 
 
   // Submit the request
