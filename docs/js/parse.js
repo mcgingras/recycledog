@@ -20,15 +20,18 @@ var url = get('url');
 var str_array = url.split("/");
 
 // Get store name from website name
+console.log('url: ' + url);
+console.log('exp: ' + exp)
 var exp = url.split(".");
-var store_name = exp[exp.length-2];
+var store_name = exp[1];
+console.log('store_name: ' )
 
 
 for (var i = 0; i < str_array.length; i++) {
   var str = str_array[i];
 
   // replace www.company_name.com with just company_name
-  if (str.includes('www.'+store_name)) {
+  if (str.match(/.*\..*\..*/) && (i = 0 || i = 2)) {
     str = store_name;
 
     // North Face - insert spaces for thenorthface
