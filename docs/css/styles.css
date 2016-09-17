@@ -170,6 +170,8 @@ body{
   font-family: 'alma_monobold';
   font-size: 12px;
   display: inline;
+  max-width: 200px;
+  overflow-x: hidden;
 }
 
 .grid--info h6{
