@@ -69,8 +69,8 @@ function run_ebay_query(query_str_lst) {
   // Construct query keywords
   var keywords = '&keywords=' + query_str_lst.join('%20').replace(/\s/g,'%20');
   console.log('all keywords: ' + keywords)
-  keywords = '&keywords='+query_str_lst.slice(0,2).join('%20').replace(/\s/g,'%20');    // CHANGE LATER***************
-  console.log('keywords: ' + keywords);
+  // keywords = '&keywords=' + query_str_lst.slice(0,2).join('%20').replace(/\s/g,'%20');    // CHANGE LATER***************
+  // console.log('keywords: ' + keywords);
 
   // Construct the request
   var url = "https://svcs.ebay.com/services/search/FindingService/v1";
