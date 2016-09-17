@@ -4,6 +4,7 @@ function _cb_findItemsByKeywords(root) {
   var html = [];
 
   console.log('root: ' + root);
+  console.log('root.findItemsByKeywordsResponse[0]: ' + root.findItemsByKeywordsResponse[0]);
   console.log('items: ' + items);
 
   html.push('<table width="100%" border="0" cellspacing="0" cellpadding="3"><tbody>');
@@ -73,8 +74,8 @@ function run_ebay_query(query_str_lst) {
   // Construct query keywords
   var keywords = '&keywords=' + query_str_lst.join('%20').replace(/ /g,'%20');
   console.log('all keywords: ' + keywords)
-  keywords = '&keywords=' + query_str_lst[1].replace(/ /g,'%20');    // CHANGE LATER***************
   keywords = '&keywords=' + query_str_lst.slice(0,2).join('%20').replace(/ /g,'%20');    // CHANGE LATER***************
+  keywords = '&keywords=' + query_str_lst[0].replace(/ /g,'%20');    // CHANGE LATER***************
   console.log('keywords: ' + keywords);
 
   // Construct the request
@@ -88,7 +89,6 @@ function run_ebay_query(query_str_lst) {
       url += "&REST-PAYLOAD";
       url += keywords;
       url += "&paginationInput.entriesPerPage=5";
-
 
   // Submit the request
   s=document.createElement('script'); // create script element
