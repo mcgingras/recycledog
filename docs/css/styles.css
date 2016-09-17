@@ -118,7 +118,7 @@ body{
 
 .grid{
   width: 250px;
-  height: 275px;
+  height: 300px;
   background-color: white;
   float: left;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
@@ -151,6 +151,12 @@ body{
   opacity: 1;
 }
 
+.grid--img{
+  height: 240px;
+  width: 250px;
+  background-size: url('assets/ebay.jpg');
+
+}
 .popover-wrapper.show {
     position: fixed;
     height: 100%;
