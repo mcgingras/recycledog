@@ -30,7 +30,7 @@ function run_ebay_query(query_str_lst) {
   // Construct query keywords
   var keywords = '&keywords=' + query_str_lst[0];
   if (query_str_lst.length > 1) {
-    keywords += '%20(' + query_str_lst.slice(1,query_str_lst.length).join(',').replace(/ /g,',') + ')';
+    keywords += '%20(' + query_str_lst.slice(1,query_str_lst.length).join(',').replace(/ /g,'%20') + ')';
   }
   // keywords += query_str_lst[0];  + query_str_lst.join('%20').replace(/ /g,'%20');
   // keywords = '&keywords=(' + query_str_lst.join(',').replace(/ /g,',') + ')';
