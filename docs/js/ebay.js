@@ -70,7 +70,7 @@ function _cb_findItemsByKeywords(root) {
 //   url += urlfilter;
 
 // Execute the function to build the URL filter
-buildURLArray(filterarray);
+// buildURLArray(filterarray);
 
 function run_ebay_query(query_str_lst) {
   // Construct query keywords
