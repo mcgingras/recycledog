@@ -13,6 +13,6 @@ console.log('explode: ' + exp);
 console.log('store is ' + store);
 console.log('split_slash: ' + split_slash);
 
-for s in split_slash {
+for (s in split_slash) {
   console.log('element: ' + s);
 }
