@@ -42,6 +42,8 @@ var yql_query = 'SELECT * FROM html WHERE url="'+url+'"';
 var query_url = "https://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20html%20where%20url%3D%22https%3A%2F%2Fwww.jcrew.com%2Fmens_category%2Fsweaters%2FJCrewcashmere%2FPRDOVR~F3994%2FF3994.jsp%22&format=json&diagnostics=true&callback="
 
 var title_list = $.getJSON(query_url);
+console.log("title_list: type:" + typeof(title_list));
+console.log(title_list.responseJSON);
 var response_json = title_list.responseJSON.query.results.body;
 console.log('encode url: ' + encodeURIComponent(url));
 console.log('response_json: ' + response_json);
