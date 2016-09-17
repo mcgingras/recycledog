@@ -21,10 +21,13 @@ function _cb_findItemsByKeywords(root) {
     if (null != title && null != viewitem) {
       html.push('<div class="grid"></div>');
     }
+
     if (count%3 == 2){
       html.push('</div>');
       dirty = false;
     }
+
+    count++;
   }
 
   if (dirty) {
