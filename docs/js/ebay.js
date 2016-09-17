@@ -18,7 +18,7 @@ function _cb_findItemsByKeywords(root) {
     var pic      = item.galleryURL.toString().replace('http:','https:');
     var viewitem = item.viewItemURL;
     if (null != title && null != viewitem) {
-      html.push('<div class="grid"><div class="grid--img" style="background-image: url("'+pic+'")"></div><div class="grid--info"><h4>Patagonia Baggies</h4></div></div>');
+      html.push('<div class="grid"><div class="grid--img" style="background-image: url("'+pic+'")"></div><div class="grid--info"><h4>'+title+'</h4></div></div>');
     }
 
     if (i%3 == 2){
