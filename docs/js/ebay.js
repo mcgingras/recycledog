@@ -17,14 +17,22 @@ function _cb_findItemsByKeywords(root) {
     var price    = item.sellingStatus["0"].currentPrice["0"].__value__;
     var viewitem = item.viewItemURL;
     var item_id  = item.itemId;
+    var yoururl;
+
     if (null != title && null != viewitem) {
 
-      var yoururl = "https://crossorigin.me/http://open.api.ebay.com/shopping?callname=GetSingleItem&version=667&appid=BrandonW-bhr-PRD-12f4c750a-2d64e0f2&itemid="+item_id+"&responseencoding=JSON";
+      yoururl = "https://crossorigin.me/http://open.api.ebay.com/shopping?callname=GetSingleItem&version=667&appid=BrandonW-bhr-PRD-12f4c750a-2d64e0f2&itemid="+item_id+"&responseencoding=JSON";
       $.ajax({ url: yoururl, success: function(data) {
         var json = JSON.parse(data);
-        var pic = json.Item.PictureURL[0];
-        html.push('<a href="'+viewitem+'"><div class="grid"><div class="grid--img" style="background-image: url(\''+pic+'\')"></div><div class="grid--info"><div class="grid--info-h4">'+title+'</div><h6>$'+price+'</h6></div></div></a>');
+        var pic = json.Item.PictureURL[0].replace('http','https');
+        var id = json.Item.ItemID;
+        console.log("update background image for: " + id);
+        $(".grid--img").css({"color":"red"});
+        $("#"+id).css({"background-image": "url(\""+pic+"\")"});
+
       }});
+
+      html.push('<a href="'+viewitem+'"><div class="grid"><div class="grid--img" id="'+item_id+'"></div><div class="grid--info"><div class="grid--info-h4">'+title+'</div><h6>$'+price+'</h6></div></div></a>');
 
     }
 
@@ -39,64 +47,14 @@ function _cb_findItemsByKeywords(root) {
     html.push('</div>');
   }
 
-
   // If No Results
   if (items.length == 0) {
     $(".popover-wrapper.error").addClass("show");
   }
 
-  console.log(html);
+  console.log('html: ' + html);
   document.getElementById("js-body--grid").innerHTML = html.join("");
 }  // End _cb_findItemsByKeywords() function
-
-
-// // Create a JavaScript array of the item filters you want to use in your request
-// var filterarray = [
-//   {"name":"MaxPrice",
-//    "value":"25",
-//    "paramName":"Currency",
-//    "paramValue":"USD"},
-//   {"name":"FreeShippingOnly",
-//    "value":"true",
-//    "paramName":"",
-//    "paramValue":""},
-//   {"name":"ListingType",
-//    "value":["AuctionWithBIN", "FixedPrice"],
-//    "paramName":"",
-//    "paramValue":""},
-//   ];
-
-// // Define global variable for the URL filter
-// var urlfilter = "";
-
-// // Generates an indexed URL snippet from the array of item filters
-// function  buildURLArray() {
-//   // Iterate through each filter in the array
-//   for(var i=0; i<filterarray.length; i++) {
-//     //Index each item filter in filterarray
-//     var itemfilter = filterarray[i];
-//     // Iterate through each parameter in each item filter
-//     for(var index in itemfilter) {
-//       // Check to see if the paramter has a value (some don't)
-//       if (itemfilter[index] !== "") {
-//         if (itemfilter[index] instanceof Array) {
-//           for(var r=0; r<itemfilter[index].length; r++) {
-//           var value = itemfilter[index][r];
-//           urlfilter += "&itemFilter\(" + i + "\)." + index + "\(" + r + "\)=" + value ;
-//           }
-//         }
-//         else {
-//           urlfilter += "&itemFilter\(" + i + "\)." + index + "=" + itemfilter[index];
-//         }
-//       }
-//     }
-//   }
-// }  // End buildURLArray() function
-
-//   url += urlfilter;
-
-// Execute the function to build the URL filter
-// buildURLArray(filterarray);
 
 function run_ebay_query(query_str_lst) {
   // Construct query keywords
@@ -104,8 +62,6 @@ function run_ebay_query(query_str_lst) {
   if (query_str_lst.length > 1) {
     keywords += '%20(' + query_str_lst.slice(1,query_str_lst.length).join(',').replace(/ /g,'%20') + ')';
   }
-  // keywords += query_str_lst[0];  + query_str_lst.join('%20').replace(/ /g,'%20');
-  // keywords = '&keywords=(' + query_str_lst.join(',').replace(/ /g,',') + ')';
   console.log('eBay query SEARCH: ' + keywords);
 
   // Construct the request
