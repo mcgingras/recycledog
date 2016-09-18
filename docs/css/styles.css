@@ -301,4 +301,4 @@ body{
     #cheer-up:hover { cursor: pointer; color: #358B3D; }
     #close-wrap { font-family: 'alma_monobold'; font-size: 10px; }
 
-    .team { visibility: hidden; }
+    .team { display: none; }
