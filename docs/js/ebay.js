@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 // Parse the response to item calls and grab pictures for grid
 function _cb_getPicture(root) {
@@ -5,6 +6,8 @@ function _cb_getPicture(root) {
 }
 
 
+=======
+>>>>>>> a5f0ab419e344538c6aed88f8f46812adca7daf2
 // Parse the response and build an HTML table to display search results
 function _cb_findItemsByKeywords(root) {
   var items = root.findItemsByKeywordsResponse[0].searchResult[0].item || [];
@@ -74,11 +77,7 @@ function _cb_findItemsByKeywords(root) {
 
   // If No Results
   if (items.length == 0) {
-    html.push('<p>Sorry, we couldn\'t find anything.</p>');
-    any_items = false;
-  }
-  else {
-      any_items = true;
+    $(".popover-wrapper.error").addClass("show");
   }
 
   document.getElementById("js-body--grid").innerHTML = html.join("");

@@ -45,8 +45,3 @@ $(document).ready(function() {
 
     });
 });
-
-$(window).ready(function() {
-    console.log(any_items);
-    if (!any_items) { $(".popover-wrapper.error").addClass("show"); }
-});
