@@ -51,7 +51,7 @@ function _cb_findItemsByKeywords(root) {
           xhr.send();
         });
       };
-      getJSON("http://open.api.ebay.com/shopping?callname=GetSingleItem&version=563&appid=BrandonW-bhr-PRD-12f4c750a-2d64e0f2&itemid=262465393239&responseencoding=json").then(function(data) {
+      getJSON("https://open.api.ebay.com/shopping?callname=GetSingleItem&version=563&appid=BrandonW-bhr-PRD-12f4c750a-2d64e0f2&itemid=262465393239&responseencoding=json").then(function(data) {
         console.log("JSON (hopefullly:)" + data.result);
       });
 
