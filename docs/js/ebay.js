@@ -23,8 +23,11 @@ function _cb_findItemsByKeywords(root) {
       $.ajax({ url: yoururl, success: function(data) {
         var json = JSON.parse(data);
         var pic = json.Item.PictureURL[0];
-        html.push('<a href="'+viewitem+'"><div class="grid"><div class="grid--img" style="background-image: url(\''+pic+'\')"></div><div class="grid--info"><div class="grid--info-h4">'+title+'</div><h6>$'+price+'</h6></div></div></a>');
+        $(item_id).css({"background-image": "url(\'"+pic+"\"'+)"});
+
       }});
+
+      html.push('<a href="'+viewitem+'"><div class="grid"><div class="grid--img +'item_id'+"></div><div class="grid--info"><div class="grid--info-h4">'+title+'</div><h6>$'+price+'</h6></div></div></a>');
 
     }
 
@@ -38,7 +41,6 @@ function _cb_findItemsByKeywords(root) {
   if (dirty) {
     html.push('</div>');
   }
-
 
   // If No Results
   if (items.length == 0) {
@@ -55,8 +57,6 @@ function run_ebay_query(query_str_lst) {
   if (query_str_lst.length > 1) {
     keywords += '%20(' + query_str_lst.slice(1,query_str_lst.length).join(',').replace(/ /g,'%20') + ')';
   }
-  // keywords += query_str_lst[0];  + query_str_lst.join('%20').replace(/ /g,'%20');
-  // keywords = '&keywords=(' + query_str_lst.join(',').replace(/ /g,',') + ')';
   console.log('eBay query SEARCH: ' + keywords);
 
   // Construct the request
