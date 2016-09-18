@@ -24,7 +24,7 @@ function _cb_findItemsByKeywords(root) {
       yoururl = "https://crossorigin.me/http://open.api.ebay.com/shopping?callname=GetSingleItem&version=667&appid=BrandonW-bhr-PRD-12f4c750a-2d64e0f2&itemid="+item_id+"&responseencoding=JSON";
       $.ajax({ url: yoururl, success: function(data) {
         var json = JSON.parse(data);
-        var pic = json.Item.PictureURL[0];
+        var pic = json.Item.PictureURL[0].replace('http','https');
         var id = json.Item.ItemID;
         console.log("update background image for: " + id);
         $(".grid--img").css({"color":"red"});
