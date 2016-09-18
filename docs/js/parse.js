@@ -17,7 +17,8 @@ var store_names_lst = [
   ["bananarepublic","banana republic"],
   ["ae","american eagle"],
   ["anntaylor","ann taylor"],
-  ["frenchconnection","french connection"]
+  ["frenchconnection","french connection"],
+  ["ralphlauren","ralph lauren"]
 ];
 
 
