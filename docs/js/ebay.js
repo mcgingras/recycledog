@@ -12,16 +12,6 @@ function _cb_findItemsByKeywords(root) {
       dirty = true;
     }
 
-    // <div class="grid">
-    //   <div class="grid--img" style="background-image: url('assets/ebay2.jpg');"></div>
-    //   <div class="grid--info">
-    //     <h4>Uniqlo Bomber Jacket</h4>
-    //     <h5 style="color:#51BD5B">99%<br><span>GREEN</span></h5>
-    //     <h6>$203.54</h6>
-    //   </div>
-    // </div>
-
-
     var item     = items[i];
     var title    = item.title;
     var price    = item.sellingStatus["0"].currentPrice["0"].__value__;
@@ -31,10 +21,9 @@ function _cb_findItemsByKeywords(root) {
 
       var yoururl = "https://crossorigin.me/http://open.api.ebay.com/shopping?callname=GetSingleItem&version=667&appid=BrandonW-bhr-PRD-12f4c750a-2d64e0f2&itemid="+item_id+"&responseencoding=JSON";
       $.ajax({ url: yoururl, success: function(data) {
-        console.log(data);
         var json = JSON.parse(data);
         var pic = json.Item.PictureURL[0];
-        html.push('<a href="'+viewitem+'"><div class="grid"><div class="grid--img" style="background-image: url(\''+pic+'\')"></div><div class="grid--info"><div class="grid--info-h4">'+title+'</div><h6>$'+price+'</h6></div></div></a>');
+        html.append('<a href="'+viewitem+'"><div class="grid"><div class="grid--img" style="background-image: url(\''+pic+'\')"></div><div class="grid--info"><div class="grid--info-h4">'+title+'</div><h6>$'+price+'</h6></div></div></a>');
       }});
 
     }
