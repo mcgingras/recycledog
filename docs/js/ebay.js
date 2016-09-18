@@ -19,7 +19,7 @@ function _cb_findItemsByKeywords(root) {
     var pic      = item.galleryURL.toString().replace('http:','https:');
     var viewitem = item.viewItemURL;
     if (null != title && null != viewitem) {
-      html.push('<a href="'viewitem'"><div class="grid"><div class="grid--img" style="background-image: url(\''+pic+'\')"></div><div class="grid--info"><div class="grid--info-h4">'+title+'</div><h6>$'+price+'</h6></div></div></a>');
+      html.push('<a href="'+viewitem+'"><div class="grid"><div class="grid--img" style="background-image: url(\''+pic+'\')"></div><div class="grid--info"><div class="grid--info-h4">'+title+'</div><h6>$'+price+'</h6></div></div></a>');
     }
 
     if (i%3 == 2){
