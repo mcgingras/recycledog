@@ -57,7 +57,7 @@ function _cb_findItemsByKeywords(root) {
       //   console.log("JSON (hopefullly:)" + data.result);
       // });
       console.log('item_id: ' + item_id);
-      let url = 'https://open.api.ebay.com/shopping?callname=GetSingleItem&version=563&appid=BrandonW-bhr-PRD-12f4c750a-2d64e0f2&itemid=' + item_id + '&responseencoding=json&callback=_cb_getPicture';
+      let url = 'https://open.api.ebay.com/shopping?callname=GetSingleItem&version=981&appid=BrandonW-bhr-PRD-12f4c750a-2d64e0f2&itemid=' + item_id + '&responseencoding=JSON&callback=_cb_getPicture';
       // Submit the request
       s=document.createElement('script'); // create script element
       s.src= url;
