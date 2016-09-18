@@ -24,15 +24,16 @@ function _cb_findItemsByKeywords(root) {
       yoururl = "https://crossorigin.me/http://open.api.ebay.com/shopping?callname=GetSingleItem&version=667&appid=BrandonW-bhr-PRD-12f4c750a-2d64e0f2&itemid="+item_id+"&responseencoding=JSON";
       $.ajax({ url: yoururl, success: function(data) {
         var json = JSON.parse(data);
-        var pic = json.Item.PictureURL[0].replace('http','https');
-        var id = json.Item.ItemID;
-        console.log("update background image for: " + id);
-        $(".grid--img").css({"color":"red"});
-        $("#"+id).css({"background-image": "url(\""+pic+"\")"});
+        var pic = json.Item.PictureURL[0];
+        console.log("update background image for: " + item_id);
+        $(item_id).css({"background-image": "url(\'"+pic+"\"'+)"});
+        addPicture(pic,price);
 
       }});
 
-      html.push('<a href="'+viewitem+'"><div class="grid"><div class="grid--img" id="'+item_id+'"></div><div class="grid--info"><div class="grid--info-h4">'+title+'</div><h6>$'+price+'</h6></div></div></a>');
+      function addPicture(pic){
+        html.push('<a href="'+viewitem+'"><div class="grid"><div class="grid--img" style="background-image: url(\''+pic+'\')"></div><div class="grid--info"><div class="grid--info-h4">'+title+'</div><h6>$'+price+'</h6></div></div></a>');
+      }
 
     }
 

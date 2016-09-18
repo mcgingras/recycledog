@@ -171,7 +171,8 @@ body{
 }
 
 .grid--info-h4{
-  font-family: 'alma_monobold';
+  /*font-family: 'alma_monobold';*/
+  font-family: 'PT Sans', sans-serif;
   font-size: 12px;
   display: block;
   white-space: nowrap;
@@ -179,6 +180,7 @@ body{
   max-width: 200px;
   text-overflow: ellipsis;
   color: black;
+
 }
 
 .grid--info h6{
