@@ -24,6 +24,7 @@ $(document).ready(function() {
 
     $("#cheer-up").on("click", function() {
         $(".popover-wrapper").removeClass("show");
+        $(".team").css("display", "flex");
     });
 
     $(".scroll-back").click(function() {

@@ -293,3 +293,5 @@ body{
     #close:hover { cursor: pointer; color: #358B3D; }
     #cheer-up:hover { cursor: pointer; color: #358B3D; }
     #close-wrap { font-family: 'alma_monobold'; font-size: 10px; }
+
+    .team { display: none; }
