@@ -27,7 +27,7 @@ function _cb_findItemsByKeywords(root) {
 
       }});
 
-      html.push('<a href="'+viewitem+'"><div class="grid"><div class="grid--img +'item_id'+"></div><div class="grid--info"><div class="grid--info-h4">'+title+'</div><h6>$'+price+'</h6></div></div></a>');
+      html.push('<a href="'+viewitem+'"><div class="grid"><div class="grid--img '+item_id+'"></div><div class="grid--info"><div class="grid--info-h4">'+title+'</div><h6>$'+price+'</h6></div></div></a>');
 
     }
 
