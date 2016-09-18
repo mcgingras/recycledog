@@ -17,10 +17,9 @@ function _cb_findItemsByKeywords(root) {
     var title    = item.title;
     var price    = item.sellingStatus["0"].currentPrice["0"].__value__;
     var pic      = item.galleryURL.toString().replace('http:','https:');
-    console.log(price);
     var viewitem = item.viewItemURL;
     if (null != title && null != viewitem) {
-      html.push('<div class="grid"><div class="grid--img" style="background-image: url(\''+pic+'\')"></div><div class="grid--info"><div class="grid--info-h4">'+title+'</div></div></div>');
+      html.push('<div class="grid"><div class="grid--img" style="background-image: url(\''+pic+'\')"></div><div class="grid--info"><div class="grid--info-h4">'+title+'</div><h6>'+price+'</h6></div></div>');
     }
 
     if (i%3 == 2){
