@@ -23,11 +23,12 @@ function _cb_findItemsByKeywords(root) {
       $.ajax({ url: yoururl, success: function(data) {
         var json = JSON.parse(data);
         var pic = json.Item.PictureURL[0];
+        console.log("update background image for: " + item_id);
         $(item_id).css({"background-image": "url(\'"+pic+"\"'+)"});
 
       }});
 
-      html.push('<a href="'+viewitem+'"><div class="grid"><div class="grid--img +'item_id'+"></div><div class="grid--info"><div class="grid--info-h4">'+title+'</div><h6>$'+price+'</h6></div></div></a>');
+      html.push('<a href="'+viewitem+'"><div class="grid"><div class="grid--img '+item_id+'"></div><div class="grid--info"><div class="grid--info-h4">'+title+'</div><h6>$'+price+'</h6></div></div></a>');
 
     }
 
