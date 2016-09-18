@@ -4,7 +4,7 @@ function get(name) {
 }
 
 $("#no-url").hide();
-var url = get('url');
+var url = window.location.href;
 if(url.split(".")[2] == "io/recycledog/"){
   $("#yes-url").hide();
   $("#no-url").show();
