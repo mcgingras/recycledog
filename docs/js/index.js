@@ -3,7 +3,7 @@ $(document).ready(function() {
     var header_init_pos = true;
 
     var imgs = ["assets/mike.jpg", "assets/brandon.jpg", "assets/matt.jpg", "assets/andrew.jpg"];
-    var names = [mike, brandon, matt, drew];
+    var names = ["mike", "brandon", "matt", "drew"];
     var grid_row = document.createElement('div');
     var target = document.getElementById("js-body--grid");
     grid_row.setAttribute("class", "grid--row team");
