@@ -4,8 +4,8 @@ function get(name) {
 }
 
 $("#no-url").hide();
-var url = window.location.href;
-if(url.split(".")[2] == "io/recycledog/"){
+var urlid = window.location.href;
+if(urlid.split(".")[2] == "io/recycledog/"){
   $("#yes-url").hide();
   $("#no-url").show();
 
@@ -23,6 +23,7 @@ var store_names_lst = [
 
 
 var yql_results = "";
+var url = get('url');
 var query_str_lst = [];
 var str_array = url.split("/");
 
