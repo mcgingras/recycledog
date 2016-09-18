@@ -18,9 +18,13 @@ $(document).ready(function() {
         $(".popover-wrapper").removeClass("show");
     });
 
+    $("#team-close").on("click", function() {
+        $(".popover-wrapper").removeClass("show");
+    });
+
     $("#cheer-up").on("click", function() {
         $(".popover-wrapper").removeClass("show");
-        $(".team").css("display", "flex");
+        $(".team").addClass("show");
     });
 
     $(".scroll-back").click(function() {

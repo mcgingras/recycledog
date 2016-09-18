@@ -235,6 +235,10 @@ body{
     border-radius: 5px;
 }
 
+.popover-content.team {
+    width: 80%;
+}
+
     .popover-top {
         width: 100%;
         height: 470px;
@@ -289,7 +293,7 @@ body{
         margin-top: 35px;
     }
 
-    #close, #cheer-up {
+    #close, #cheer-up, #team-close {
         border: none;
         background-color: transparent;
         margin-top: 7px;
@@ -299,6 +303,23 @@ body{
     }
     #close:hover { cursor: pointer; color: #358B3D; }
     #cheer-up:hover { cursor: pointer; color: #358B3D; }
+    #team-close:hover { cursor: pointer; color: #358B3D; }
     #close-wrap { font-family: 'alma_monobold'; font-size: 10px; }
 
-    .team { display: none; }
+    .member {
+        display: inline-block;
+        width: 25%;
+        margin-right: -4px;
+        padding-top: 50px;
+    } .member img { width: 100%; }
+    .team .popover-top {
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .team-tag {
+        font-family: 'alma_monobold';
+        font-size: 16px;
+        text-align: center;
+        margin-top: 25px;
+    }
