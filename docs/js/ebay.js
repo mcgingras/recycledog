@@ -1,4 +1,9 @@
-var any_items = false;
+
+// Parse the response to item calls and grab pictures for grid
+function _cb_getPicture(root) {
+
+}
+
 
 // Parse the response and build an HTML table to display search results
 function _cb_findItemsByKeywords(root) {
@@ -30,6 +35,28 @@ function _cb_findItemsByKeywords(root) {
     var pic      = item.galleryURL.toString().replace('http:','https:');
     var viewitem = item.viewItemURL;
     if (null != title && null != viewitem) {
+
+      // Get item pictures
+      var getJSON = function(url) {
+        return new Promise(function(resolve, reject) {
+          var xhr = new XMLHttpRequest();
+          xhr.open('get', url, true);
+          xhr.responseType = 'json';
+          xhr.onload = function() {
+            var status = xhr.status;
+            if (status == 200) {
+              resolve(xhr.response);
+            } else {
+              reject(status);
+            }
+          };
+          xhr.send();
+        });
+      };
+      getJSON("http://open.api.ebay.com/shopping?callname=GetSingleItem&version=563&appid=BrandonW-bhr-PRD-12f4c750a-2d64e0f2&itemid=262465393239&responseencoding=json").then(function(data{
+        console.log("JSON (hopefullly:)" + data.result);
+      }));
+
       html.push('<a href="'+viewitem+'"><div class="grid"><div class="grid--img" style="background-image: url(\''+pic+'\')"></div><div class="grid--info"><div class="grid--info-h4">'+title+'</div><h6>$'+price+'</h6></div></div></a>');
     }
 
@@ -56,6 +83,7 @@ function _cb_findItemsByKeywords(root) {
 
   document.getElementById("js-body--grid").innerHTML = html.join("");
 }  // End _cb_findItemsByKeywords() function
+
 
 // // Create a JavaScript array of the item filters you want to use in your request
 // var filterarray = [
