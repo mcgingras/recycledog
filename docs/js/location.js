@@ -23,12 +23,13 @@ function codeAddress() {
 //     <input type="button" value="Geocode" onclick = "codeAddress()">
 // </body>
 
+
 //Calculate distance between two points
 function getLocation() {
   navigator.geolocation.getCurrentPosition(
             function(position) {
                 var latLngA = new google.maps.LatLng(position.coords.latitude,position.coords.longitude);
-                var latLngB = new google.maps.LatLng(40.778721618334295, -73.96648406982422);
+                var latLngB = new google.maps.LatLng(coord);
                 var distance = google.maps.geometry.spherical.computeDistanceBetween(latLngA, latLngB);
                 alert(distance);//In metres
             },
@@ -37,3 +38,10 @@ function getLocation() {
             }
     );
 }
+
+//current pos in getLocation/distance calculation
+navigator.geolocation.getCurrentPosition(function(location) {
+  console.log(location.coords.latitude);
+  console.log(location.coords.longitude);
+  console.log(location.coords.accuracy);
+});
