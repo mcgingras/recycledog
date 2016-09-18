@@ -19,7 +19,10 @@ var store_names_lst = [
   ["anntaylor","ann taylor"],
   ["frenchconnection","french connection"],
   ["ralphlauren","ralph lauren"],
-  ["underarmour","under armour"]
+  ["underarmour","under armour"],
+  ["newbalance","new balance"],
+  ["urbanoutfitters","urban outfitters"],
+  ["brooksbrothers","brooks brothers"]
 ];
 
 
