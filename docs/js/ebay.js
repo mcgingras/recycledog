@@ -31,34 +31,18 @@ function _cb_findItemsByKeywords(root) {
     var item     = items[i];
     var title    = item.title;
     var price    = item.sellingStatus["0"].currentPrice["0"].__value__;
-    var pic      = item.galleryURL.toString().replace('http:','https:');
     var viewitem = item.viewItemURL;
     var item_id  = item.itemId;
     if (null != title && null != viewitem) {
 
-      // Get item pictures
-      console.log('item_id: ' + item_id);
-      var endpoint = 'https://open.api.ebay.com/shopping?';
-      var appid = 'BrandonW-bhr-PRD-12f4c750a-2d64e0f2';
-      $.ajax({
-        type: "POST",
-        url: endpoint,
-        data: 'appid='+appid
-              +"&callname=GetSingleItem"
-              +"&version=981"
-              +"&itemid="+item_id
-              +"&responseencoding=JSON",
-        dataType: "JSON",
-        success: function(data) {
-            alert(data);
-        },
-        failure: function(errMsg) {
-            alert(errMsg);
-        }
-      });
-      // let url = 'https://open.api.ebay.com/shopping?callname=GetSingleItem&version=981&appid=BrandonW-bhr-PRD-12f4c750a-2d64e0f2&itemid=' + item_id + '&responseencoding=JSON&callback=_cb_getPicture';
+      var yoururl = "https://crossorigin.me/http://open.api.ebay.com/shopping?callname=GetSingleItem&version=667&appid=BrandonW-bhr-PRD-12f4c750a-2d64e0f2&itemid="+item_id+"&responseencoding=JSON";
+      $.ajax({ url: yoururl, success: function(data) {
+        console.log(data);
+        var json = JSON.parse(data);
+        var pic = json.Item.PictureURL[0]);
+        html.push('<a href="'+viewitem+'"><div class="grid"><div class="grid--img" style="background-image: url(\''+pic+'\')"></div><div class="grid--info"><div class="grid--info-h4">'+title+'</div><h6>$'+price+'</h6></div></div></a>');
+      }});
 
-      html.push('<a href="'+viewitem+'"><div class="grid"><div class="grid--img" style="background-image: url(\''+pic+'\')"></div><div class="grid--info"><div class="grid--info-h4">'+title+'</div><h6>$'+price+'</h6></div></div></a>');
     }
 
     if (i%3 == 2){
