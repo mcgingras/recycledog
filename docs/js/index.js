@@ -20,7 +20,7 @@ $(document).ready(function() {
 
     $("#cheer-up").on("click", function() {
         $(".popover-wrapper").removeClass("show");
-        $(".team").css("display", "flex");
+        $(".team").css("visibility", "visible");
     });
 
     $(".scroll-back").click(function() {
