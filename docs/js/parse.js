@@ -18,7 +18,10 @@ var store_names_lst = [
   ["ae","american eagle"],
   ["anntaylor","ann taylor"],
   ["frenchconnection","french connection"],
-  ["ralphlauren","ralph lauren"]
+  ["ralphlauren","ralph lauren"],
+  ["newbalance","new balance"],
+  ["tommy","tommy hilfiger"],
+  ["underarmour","under armour"]
 ];
 
 
