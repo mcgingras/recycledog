@@ -1,9 +1,6 @@
 $(document).ready(function() {
     var pre_pop = true;
     var header_init_pos = true;
-    console.log(any_items);
-    if (!any_items) { $(".popover-wrapper.error").addClass("show"); }
-
 
     /*--------------------Rotating_Tag--------------------*/
 
@@ -47,4 +44,9 @@ $(document).ready(function() {
         }
 
     });
+});
+
+$(window).ready(function() {
+    console.log(any_items);
+    if (!any_items) { $(".popover-wrapper.error").addClass("show"); }
 });
