@@ -53,7 +53,7 @@ function _cb_findItemsByKeywords(root) {
       };
       getJSON("http://open.api.ebay.com/shopping?callname=GetSingleItem&version=563&appid=BrandonW-bhr-PRD-12f4c750a-2d64e0f2&itemid=262465393239&responseencoding=json").then(function(data) {
         console.log("JSON (hopefullly:)" + data.result);
-      }));
+      });
 
       html.push('<a href="'+viewitem+'"><div class="grid"><div class="grid--img" style="background-image: url(\''+pic+'\')"></div><div class="grid--info"><div class="grid--info-h4">'+title+'</div><h6>$'+price+'</h6></div></div></a>');
     }
