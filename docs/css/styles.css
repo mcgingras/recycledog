@@ -310,16 +310,25 @@ body{
         display: inline-block;
         width: 25%;
         margin-right: -4px;
-        padding-top: 50px;
     } .member img { width: 100%; }
     .team .popover-top {
         width: 80%;
         margin-left: auto;
         margin-right: auto;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .team .popover-top .wrapper {
+        display: block;
+        width: 100%;
     }
     .team-tag {
+        display: block;
         font-family: 'alma_monobold';
         font-size: 16px;
         text-align: center;
         margin-top: 25px;
+        width: 100%;
     }
