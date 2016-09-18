@@ -25,6 +25,7 @@ function _cb_findItemsByKeywords(root) {
       $.ajax({ url: yoururl, success: function(data) {
         var json = JSON.parse(data);
         var pic = json.Item.PictureURL[0];
+        console.log("update background image for: " + item_id);
         $(item_id).css({"background-image": "url(\'"+pic+"\"'+)"});
 
       }});
