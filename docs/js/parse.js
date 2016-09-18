@@ -20,11 +20,8 @@ var url = get('url');
 var str_array = url.split("/");
 
 // Get store name from website name
-console.log('url: ' + url);
-console.log('exp: ' + exp)
 var exp = url.split(".");
 var store_name = exp[1];
-console.log('store_name: ' )
 
 
 for (var i = 0; i < str_array.length; i++) {

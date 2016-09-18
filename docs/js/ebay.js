@@ -17,7 +17,7 @@ function _cb_findItemsByKeywords(root) {
     var title    = item.title;
     var price    = item.currentPrice;
     var pic      = item.galleryURL.toString().replace('http:','https:');
-    console.log(price);
+    console.log(item);
     var viewitem = item.viewItemURL;
     if (null != title && null != viewitem) {
       html.push('<div class="grid"><div class="grid--img" style="background-image: url(\''+pic+'\')"></div><div class="grid--info"><div class="grid--info-h4">'+title+'</div></div></div>');
@@ -39,7 +39,7 @@ function _cb_findItemsByKeywords(root) {
   if (items.length == 0) {
     html.push('<p>Sorry, we couldn\'t find anything.</p>');
   }
-  
+
   document.getElementById("js-body--grid").innerHTML = html.join("");
 }  // End _cb_findItemsByKeywords() function
 
