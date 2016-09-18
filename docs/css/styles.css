@@ -168,7 +168,10 @@ body{
 
 .grid--info-h4{
   font-family: 'alma_monobold';
-  font-size: 12px;
+  font-size: 10px;
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
   max-width: 200px;
   text-overflow: ellipsis;
 }
