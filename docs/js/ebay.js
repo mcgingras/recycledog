@@ -45,7 +45,7 @@ function _cb_findItemsByKeywords(root) {
     $(".popover-wrapper.error").addClass("show");
   }
 
-  console.log(html);
+  console.log('html: ' + html);
   document.getElementById("js-body--grid").innerHTML = html.join("");
 }  // End _cb_findItemsByKeywords() function
 
