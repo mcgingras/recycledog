@@ -1,9 +1,3 @@
-// Parse the response to item calls and grab pictures for grid
-function _cb_getPicture(root) {
-  console.log('GOT Picture DATA!!!');
-  console.log('root: ' + root);
-}
-
 // Parse the response and build an HTML table to display search results
 function _cb_findItemsByKeywords(root) {
   var items = root.findItemsByKeywordsResponse[0].searchResult[0].item || [];
@@ -39,7 +33,7 @@ function _cb_findItemsByKeywords(root) {
       $.ajax({ url: yoururl, success: function(data) {
         console.log(data);
         var json = JSON.parse(data);
-        var pic = json.Item.PictureURL[0]);
+        var pic = json.Item.PictureURL[0];
         html.push('<a href="'+viewitem+'"><div class="grid"><div class="grid--img" style="background-image: url(\''+pic+'\')"></div><div class="grid--info"><div class="grid--info-h4">'+title+'</div><h6>$'+price+'</h6></div></div></a>');
       }});
 
