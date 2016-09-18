@@ -113,6 +113,9 @@ body{
 .grid--row{
   display: flex;
   justify-content: space-between;
+}
+
+.grid--row:not(:first-child){
   margin-top: 30px;
 }
 
