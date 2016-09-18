@@ -2,6 +2,7 @@
 function _cb_findItemsByKeywords(root) {
   var items = root.findItemsByKeywordsResponse[0].searchResult[0].item || [];
   var html = [];
+  var test = [];
   var dirty;
 
   console.log('eBay query results length: ' + items.length);
@@ -23,7 +24,8 @@ function _cb_findItemsByKeywords(root) {
       $.ajax({ url: yoururl, success: function(data) {
         var json = JSON.parse(data);
         var pic = json.Item.PictureURL[0];
-        html.append('<a href="'+viewitem+'"><div class="grid"><div class="grid--img" style="background-image: url(\''+pic+'\')"></div><div class="grid--info"><div class="grid--info-h4">'+title+'</div><h6>$'+price+'</h6></div></div></a>');
+        test.push("yes");
+        html.push('<a href="'+viewitem+'"><div class="grid"><div class="grid--img" style="background-image: url(\''+pic+'\')"></div><div class="grid--info"><div class="grid--info-h4">'+title+'</div><h6>$'+price+'</h6></div></div></a>');
       }});
 
     }
