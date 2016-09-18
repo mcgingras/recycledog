@@ -37,31 +37,26 @@ function _cb_findItemsByKeywords(root) {
     if (null != title && null != viewitem) {
 
       // Get item pictures
-      // var getJSON = function(url) {
-      //   return new Promise(function(resolve, reject) {
-      //     var xhr = new XMLHttpRequest();
-      //     xhr.open('get', url, true);
-      //     xhr.responseType = 'json';
-      //     xhr.onload = function() {
-      //       var status = xhr.status;
-      //       if (status == 200) {
-      //         resolve(xhr.response);
-      //       } else {
-      //         reject(status);
-      //       }
-      //     };
-      //     xhr.send();
-      //   });
-      // };
-      // getJSON("https://open.api.ebay.com/shopping?callname=GetSingleItem&version=563&appid=BrandonW-bhr-PRD-12f4c750a-2d64e0f2&itemid=262465393239&responseencoding=json").then(function(data) {
-      //   console.log("JSON (hopefullly:)" + data.result);
-      // });
       console.log('item_id: ' + item_id);
-      let url = 'https://open.api.ebay.com/shopping?callname=GetSingleItem&version=981&appid=BrandonW-bhr-PRD-12f4c750a-2d64e0f2&itemid=' + item_id + '&responseencoding=JSON&callback=_cb_getPicture';
-      // Submit the request
-      s=document.createElement('script'); // create script element
-      s.src= url;
-      document.body.appendChild(s);
+      var endpoint = 'https://open.api.ebay.com/shopping?';
+      var appid = 'BrandonW-bhr-PRD-12f4c750a-2d64e0f2';
+      $.ajax({
+        type: "POST",
+        url: endpoint,
+        data: 'appid='+appid
+              +"&callname=GetSingleItem"
+              +"&version=981"
+              +"&itemid="+item_id
+              +"&responseencoding=JSON",
+        dataType: "JSON",
+        success: function(data) {
+            alert(data);
+        },
+        failure: function(errMsg) {
+            alert(errMsg);
+        }
+      });
+      // let url = 'https://open.api.ebay.com/shopping?callname=GetSingleItem&version=981&appid=BrandonW-bhr-PRD-12f4c750a-2d64e0f2&itemid=' + item_id + '&responseencoding=JSON&callback=_cb_getPicture';
 
       html.push('<a href="'+viewitem+'"><div class="grid"><div class="grid--img" style="background-image: url(\''+pic+'\')"></div><div class="grid--info"><div class="grid--info-h4">'+title+'</div><h6>$'+price+'</h6></div></div></a>');
     }
