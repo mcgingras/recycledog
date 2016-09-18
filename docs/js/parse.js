@@ -1,8 +1,14 @@
-$("#no-url").hide();
-
 function get(name) {
   if(name=(new RegExp('[?&]'+encodeURIComponent(name)+'=([^&]*)')).exec(location.search))
     return decodeURIComponent(name[1]);
+}
+
+$("#no-url").hide();
+var url = get('url');
+if(url.split(".")[2] == "io/recycledog/"){
+  $("#yes-url").hide();
+  $("#no-url").show();
+
 }
 
 // List of stores [urlname,actual name] (name we want in query is on the right)
@@ -18,20 +24,11 @@ var store_names_lst = [
 
 var yql_results = "";
 var query_str_lst = [];
-var url = get('url');
 var str_array = url.split("/");
 
 // Get store name from website name
 var exp = url.split(".");
 var store_name = exp[1];
-
-
-
-if(url.split(".")[2] == "io/recycledog/"){
-  $("#yes-url").hide();
-  $("#no-url").show();
-
-}
 
 
 for (var i = 0; i < str_array.length; i++) {
