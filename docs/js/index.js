@@ -1,8 +1,6 @@
 $(document).ready(function() {
     var pre_pop = true;
     var header_init_pos = true;
-    if (pre_pop) { $(".popover-wrapper.suggest").addClass("show"); pre_pop = false; }
-
 
     /*--------------------Rotating_Tag--------------------*/
 
@@ -26,6 +24,7 @@ $(document).ready(function() {
 
     $("#cheer-up").on("click", function() {
         $(".popover-wrapper").removeClass("show");
+        $(".team").css("display", "flex");
     });
 
     $(".scroll-back").click(function() {
