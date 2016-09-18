@@ -27,6 +27,7 @@ function _cb_findItemsByKeywords(root) {
         var pic = json.Item.PictureURL[0];
         var id = json.Item.ItemID;
         console.log("update background image for: " + id);
+        $(".grid--img").css({"color":"red"});
         $("."+id).css({"background-image": "url(\'"+pic+"\"'+)"});
 
       }});
