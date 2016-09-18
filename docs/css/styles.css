@@ -218,6 +218,13 @@ body{
     display: none;
 }
 
+.no-url{
+  margin-top: 20px;
+    font-family: 'alma_monobold';
+    font-size: 36px;
+    text-align: center;
+}
+
 .popover-content {
     width: 50%;
     height: 500px;

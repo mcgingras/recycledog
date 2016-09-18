@@ -1,3 +1,5 @@
+$("#no-url").hide();
+
 function get(name) {
   if(name=(new RegExp('[?&]'+encodeURIComponent(name)+'=([^&]*)')).exec(location.search))
     return decodeURIComponent(name[1]);
@@ -22,6 +24,14 @@ var str_array = url.split("/");
 // Get store name from website name
 var exp = url.split(".");
 var store_name = exp[1];
+
+
+
+if(url.split(".")[2] == "io/recycledog/"){
+  $("#yes-url").hide();
+  $("#no-url").show();
+
+}
 
 
 for (var i = 0; i < str_array.length; i++) {
