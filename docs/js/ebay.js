@@ -28,11 +28,11 @@ function _cb_findItemsByKeywords(root) {
         var id = json.Item.ItemID;
         console.log("update background image for: " + id);
         $(".grid--img").css({"color":"red"});
-        $("."+id).css({"background-image": "url(\'"+pic+"\"'+)"});
+        $("#"+id).css({"background-image": "url(\""+pic+"\")"});
 
       }});
 
-      html.push('<a href="'+viewitem+'"><div class="grid"><div class="grid--img '+item_id+'"></div><div class="grid--info"><div class="grid--info-h4">'+title+'</div><h6>$'+price+'</h6></div></div></a>');
+      html.push('<a href="'+viewitem+'"><div class="grid"><div class="grid--img" id="'+item_id+'"></div><div class="grid--info"><div class="grid--info-h4">'+title+'</div><h6>$'+price+'</h6></div></div></a>');
 
     }
 
