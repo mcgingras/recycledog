@@ -1,3 +1,5 @@
+var any_items = false;
+
 // Parse the response and build an HTML table to display search results
 function _cb_findItemsByKeywords(root) {
   var items = root.findItemsByKeywordsResponse[0].searchResult[0].item || [];
@@ -46,6 +48,10 @@ function _cb_findItemsByKeywords(root) {
   // If No Results
   if (items.length == 0) {
     html.push('<p>Sorry, we couldn\'t find anything.</p>');
+    any_items = false;
+  }
+  else {
+      any_items = true;
   }
 
   document.getElementById("js-body--grid").innerHTML = html.join("");
