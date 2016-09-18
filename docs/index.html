@@ -69,6 +69,18 @@
       </div>
   </div>
 
+<script type="text/javascript">
+
+var yoururl = "https://crossorigin.me/http://open.api.ebay.com/shopping?callname=GetSingleItem&version=667&appid=BrandonW-bhr-PRD-12f4c750a-2d64e0f2&itemid=262465393239&responseencoding=JSON";
+$.ajax({ url: yoururl, success: function(data) {
+  console.log(data);
+  var json = JSON.parse(data);
+  console.log(json.Item.PictureURL[0]);
+} });
+
+
+</script>
+
 <script type="text/javascript" src="js/ebay.js"></script>
 <script type="text/javascript" src="js/parse.js"></script>
 <script type="text/javascript" src="js/index.js" ></script>
